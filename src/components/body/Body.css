@@ -1,0 +1,14 @@
+.body-container{
+    position: relative;
+    background-color: lightblue;
+    height: 300px;
+    margin-top: 700px;
+    
+   
+}
+.para-container{
+   font-size: 50px;
+   background-color: antiquewhite;
+   padding: 20px;
+ 
+}

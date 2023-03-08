@@ -1,0 +1,48 @@
+.header {
+    display: flex;
+    flex-direction: row;
+    background-color: lightblue;
+    justify-content: space-between;
+    margin: 0;
+    
+}
+
+.header-left {
+    font-size: 28px;
+    margin-top: 50px;
+    margin-left: 150px;
+    padding: 8px;
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-weight: bold;
+}
+.header-left p{
+    font-size: 20px;
+}
+
+.header-right{
+    display: flex;
+    align-items: center;
+}
+.linkedin-button{
+    margin: 0;
+    display: flex;
+    align-items: center;
+    width: 60px;
+    margin-right: 80px;
+}
+.linkedin-button p{
+    padding: 4px;
+}
+.linkedin-icon{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    margin-right: 80px;
+}
+.linkedin-icon:hover{
+    cursor: pointer;
+    box-shadow: 2px 2px 5px 0.5px;
+    color: black;
+    
+}
