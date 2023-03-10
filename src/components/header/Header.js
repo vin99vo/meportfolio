@@ -1,18 +1,13 @@
+import React from 'react'
 import "./Header.css";
-import linkedin from '../../icons/linkedin.png';
+import HeaderLeft from './HeaderLeft';
+import HeaderRight from './HeaderRight';
 
 function Header({ title, image, content }) {
   return (
     <div className="header">
-      <div className="header-left">
-        <h2>{title}</h2>
-        <p>{content}</p>
-      </div>
-      <div className="header-right">
-        <a className="linkedin-button" href = "https://www.linkedin.com/in/vincent-v-a59822124/" target="_blank">
-          <img class="linkedin-icon" src={linkedin} alt="linkedin"/>
-        </a>
-      </div>
+      <HeaderLeft title="Vincent Vo" content="Junior Web Developer" />
+      <HeaderRight/>
     </div>
   );
 }

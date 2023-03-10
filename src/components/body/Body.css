@@ -1,14 +1,11 @@
-.body-container{
-    position: relative;
-    background-color: lightblue;
-    height: 300px;
-    margin-top: 700px;
-    
-   
-}
-.para-container{
-   font-size: 50px;
-   background-color: antiquewhite;
-   padding: 20px;
- 
+.body-container {
+  /* max-width: 600px; */
+  margin: 2rem auto;
+  text-align: center;
+background-color: bisque;
+} 
+
+.middle-container{
+  background-color: lightskyblue;
+  width: 700px;
 }

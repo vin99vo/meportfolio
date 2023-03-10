@@ -1,0 +1,13 @@
+.aboutme{
+   margin: auto;
+   text-align: center;
+   max-width: 500px;
+   background-color: aqua;
+}
+
+.aboutme h2{
+    font-size: 40px;
+    margin: 0;
+    padding: 0;
+    
+}

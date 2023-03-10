@@ -1,0 +1,20 @@
+.icon img{
+    width: 60px;
+    height: 60px;
+    border-radius: 30px;
+    object-fit: cover;
+}
+.icon:hover{
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    color: black;
+    
+}
+.icon p{
+    margin: 0;
+    padding:0;
+    font-size: 16px;
+}
+.icon{
+    width: 60px;
+}
