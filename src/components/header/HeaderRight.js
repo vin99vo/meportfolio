@@ -1,4 +1,4 @@
-import linkedinLogo from "../../thumbnails/linkedinLogo.png";
+import LinkedInLogo from "../../thumbnails/LinkedInLogo.png";
 import Icon from "../general/Icon";
 import './HeaderRight.css'
 
@@ -11,9 +11,8 @@ const HeaderRight = () => {
         target="_blank"
       >
         <Icon
-          class="linkedin-icon"
-          imgUrl={linkedinLogo}
-          alt="linkedin"
+          imgUrl={LinkedInLogo}
+          alt="LinkedIn"
           logo="LinkedIn"
         />
       </a>

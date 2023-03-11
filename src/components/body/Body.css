@@ -1,11 +1,6 @@
 .body-container {
   /* max-width: 600px; */
-  margin: 2rem auto;
+  margin-top: 50px;
   text-align: center;
 background-color: bisque;
 } 
-
-.middle-container{
-  background-color: lightskyblue;
-  width: 700px;
-}

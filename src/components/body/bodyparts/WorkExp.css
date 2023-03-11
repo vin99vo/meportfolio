@@ -1,0 +1,30 @@
+.workexp{
+    max-width: 750px;
+    margin: auto;
+    background-color: aqua;
+  margin-top: 50px;
+ text-align: left;
+}
+.workexp h2{
+  text-align: center;
+}
+.job1{
+  margin: 20px 30px;
+  padding: 0;
+}
+.job1 h3{
+  margin: 20px;
+  font-size: 22px;
+}
+.job1 h4{
+  margin-top: -20px;
+  font-size: 18px;
+}
+.job1 h5{
+  margin-top: -20px;
+  font-size: 18px;
+}
+.job1 .key-responsibilities{
+  margin-top: -20px;
+  font-size: 16px;
+}

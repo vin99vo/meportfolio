@@ -1,13 +1,17 @@
 
-import AboutMe from "./AboutMe";
+import AboutMe from "./bodyparts/AboutMe";
 import "./Body.css";
-import EduAndSkills from "./EduAndSkills";
+import EduAndSkills from "./bodyparts/EduAndSkills";
+import WorkExp from "./bodyparts/WorkExp";
+import ExtraCurricular from "./bodyparts/ExtraCurricular";
 
-function Body({ content }) {
+const Body = () => {
   return (
     <div className="body-container">
       <AboutMe />
       <EduAndSkills />
+      <WorkExp />
+      <ExtraCurricular/>
     </div>
   );
 }

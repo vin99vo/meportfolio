@@ -1,14 +1,14 @@
-import Card from "../general/Card";
+import Card from "../../general/Card";
 import "./EduAndSkills.css";
-import Icon from "../general/Icon";
-import ReactJSLogo from "../../thumbnails/ReactJSLogo.png";
-import CSS3Logo from "../../thumbnails/CSS3Logo.png";
-import HTML5Logo from "../../thumbnails/HTML5Logo.png";
-import JavaScriptLogo from "../../thumbnails/JavaScriptLogo.png";
-import ReduxLogo from "../../thumbnails/ReduxLogo.png";
-import TypeScriptLogo from "../../thumbnails/TypeScriptLogo.png";
-import RStudioLogo from "../../thumbnails/RStudioLogo.png";
-import SQLLogo from "../../thumbnails/SQLLogo.png";
+import Icon from "../../general/Icon";
+import ReactJSLogo from "../../../thumbnails/ReactJSLogo.png";
+import CSS3Logo from "../../../thumbnails/CSS3Logo.png";
+import HTML5Logo from "../../../thumbnails/HTML5Logo.png";
+import JavaScriptLogo from "../../../thumbnails/JavaScriptLogo.png";
+import ReduxLogo from "../../../thumbnails/ReduxLogo.png";
+import TypeScriptLogo from "../../../thumbnails/TypeScriptLogo.png";
+import RStudioLogo from "../../../thumbnails/RStudioLogo.png";
+import SQLLogo from "../../../thumbnails/SQLLogo.png";
 
 const EduAndSkills = () => {
   return (

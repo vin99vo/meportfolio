@@ -5,6 +5,7 @@ const HeaderLeft = (props) => {
     <div className="header-left">
       <h2>{props.title}</h2>
       <p>{props.content}</p>
+      <p>Melbourne, Australia</p>
     </div>
   );
 };

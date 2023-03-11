@@ -1,0 +1,30 @@
+.exc {
+  max-width: 750px;
+  margin: auto;
+  background-color: aqua;
+  margin-top: 50px;
+  text-align: left;
+}
+.exc h2 {
+  text-align: center;
+}
+.exc1 {
+  margin: 20px 30px;
+  padding: 0;
+}
+.exc1 h3 {
+  margin: 20px;
+  font-size: 22px;
+}
+.exc1 h4 {
+  margin-top: -20px;
+  font-size: 18px;
+}
+.exc1 h5 {
+  margin-top: -20px;
+  font-size: 18px;
+}
+.exc1 .key-responsibilities {
+  margin-top: -20px;
+  font-size: 16px;
+}
