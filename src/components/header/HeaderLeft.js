@@ -1,13 +1,15 @@
-import './HeaderLeft.css'
+import Icon from '../general/Icon';
+import './HeaderLeft.css';
+import frisbeeLogo from '../../thumbnails/frisbeeLogo.png';
 
-const HeaderLeft = (props) => {
+const HeaderLeft = () => {
   return (
     <div className="header-left">
-      <h2>{props.title}</h2>
-      <p>{props.content}</p>
-      <p>Melbourne, Australia</p>
+      <h2>Vincent Vo</h2>      
+      <Icon className ='fris' imgUrl={frisbeeLogo} alt='frisbeeLogo'/>
     </div>
   );
 };
 
 export default HeaderLeft;
+

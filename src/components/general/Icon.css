@@ -1,19 +1,22 @@
-.icon img{
+.Icon{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100px;
+    white-space: nowrap;
+}
+.Icon img{
     width: 60px;
     height: 60px;
     border-radius: 30px;
-    object-fit: cover;
+    object-fit:cover;
 }
-.icon:hover{
+/* .Icon:hover{
     cursor: pointer;
     box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
     color: black;
-}
-.icon p{
-    margin: 0;
-    padding:0;
+} */
+.Icon span{
+    margin-left: 4px;
     font-size: 16px;
-}
-.icon{
-    width: 60px;
 }

@@ -4,9 +4,9 @@ import './Icon.css';
 
 const Icon = (props) => {
     return (
-        <div className=  {`icon ${props.class}`}>
+        <div className=  {`Icon ${props.class}`}>
             <img src={props.imgUrl} alt={props.alt}/>
-            <p>{props.logo}</p>
+            <span>{props.logo}</span>
         </div>
     )
 }

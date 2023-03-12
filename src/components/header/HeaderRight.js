@@ -10,10 +10,9 @@ const HeaderRight = () => {
         href="https://www.linkedin.com/in/vincent-v-a59822124/"
         target="_blank"
       >
-        <Icon
+        <Icon className='linkedinLogo'
           imgUrl={LinkedInLogo}
           alt="LinkedIn"
-          logo="LinkedIn"
         />
       </a>
     </div>

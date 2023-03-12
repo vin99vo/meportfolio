@@ -5,8 +5,11 @@
 }
 
 .aboutme h2{
-    font-size: 40px;
+    font-size: 32px;
     margin: 0;
     padding: 0;
-    
+}
+p{
+    line-height: 8px;
+    text-align: left;
 }

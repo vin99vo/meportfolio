@@ -12,3 +12,14 @@
 .linkedin-button p{
     padding: 4px;
 }
+.header-right .Icon img{
+    width: 45px;
+    height: 45px;
+}
+
+.header-right .Icon img:hover{
+    cursor: pointer;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
+    color: black;
+
+}

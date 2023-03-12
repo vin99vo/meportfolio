@@ -11,6 +11,12 @@ import RStudioLogo from "../../../thumbnails/RStudioLogo.png";
 import SQLLogo from "../../../thumbnails/SQLLogo.png";
 
 const EduAndSkills = () => {
+  // const Education = {
+  //   title: 'Education',
+  //   date:'',
+  //   role: '',
+  //   description: ["&#x2022; University of Melbourne&#x3a; Bachelor of Commerce &#8211; Actuarial Sciences 2022 Graduate",],
+  // }
   return (
     <div className="eduandskills">
       <Card>

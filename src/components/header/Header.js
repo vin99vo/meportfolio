@@ -6,7 +6,7 @@ import HeaderRight from './HeaderRight';
 const Header = ({ title, image, content }) => {
   return (
     <div className="header">
-      <HeaderLeft title="Vincent Vo" content="Junior Web Developer" />
+      <HeaderLeft />
       <HeaderRight/>
     </div>
   );
