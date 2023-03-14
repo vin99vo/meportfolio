@@ -1,36 +1,31 @@
 import Card from "../../general/Card";
 import "./EduAndSkills.css";
 import Icon from "../../general/Icon";
-import ReactJSLogo from "../../../thumbnails/ReactJSLogo.png";
-import CSS3Logo from "../../../thumbnails/CSS3Logo.png";
-import HTML5Logo from "../../../thumbnails/HTML5Logo.png";
-import JavaScriptLogo from "../../../thumbnails/JavaScriptLogo.png";
-import ReduxLogo from "../../../thumbnails/ReduxLogo.png";
-import TypeScriptLogo from "../../../thumbnails/TypeScriptLogo.png";
-import RStudioLogo from "../../../thumbnails/RStudioLogo.png";
-import SQLLogo from "../../../thumbnails/SQLLogo.png";
+import ReactJSLogo from "../../../thumbnails/icons/ReactJSLogo.png";
+import CSS3Logo from "../../../thumbnails/icons/CSS3Logo.png";
+import HTML5Logo from "../../../thumbnails/icons/HTML5Logo.png";
+import JavaScriptLogo from "../../../thumbnails/icons/JavaScriptLogo.png";
+import ReduxLogo from "../../../thumbnails/icons/ReduxLogo.png";
+import TypeScriptLogo from "../../../thumbnails/icons/TypeScriptLogo.png";
+import RStudioLogo from "../../../thumbnails/icons/RStudioLogo.png";
+import SQLLogo from "../../../thumbnails/icons/SQLLogo.png";
+import JavaLogo from "../../../thumbnails/icons/javaLogo.png"
+import Content from "../../general/Content";
 
 const EduAndSkills = () => {
-  // const Education = {
-  //   title: 'Education',
-  //   date:'',
-  //   role: '',
-  //   description: ["&#x2022; University of Melbourne&#x3a; Bachelor of Commerce &#8211; Actuarial Sciences 2022 Graduate",],
-  // }
+  const contents = [{
+    // title: '',
+    // date:'',
+    // role: '',
+    description: ["• University of Melbourne, Bachelor of Commerce (Actuarial Sciences 2022 Graduate)"]
+  }]
+  const contentList = contents.map((x) => <Content object={x}/>)
   return (
     <div className="eduandskills">
       <Card>
-        <div>
-          <h2>Education</h2>
-          <p>
-            &#x2022; University of Melbourne&#x3a; Bachelor of Commerce &#8211;
-            Actuarial Sciences 2022 Graduate
-          </p>
-        </div>
-        {/* react html css
-          javascript redux typescript
-          sql r */}
-        <div>
+        <h2 className="education">Education</h2>
+        {contentList}
+        <div className="skills-container">
           <h2>Skills</h2>
           <div className="skill-icons">
             <Icon imgUrl={ReactJSLogo} alt="ReactJS" logo="ReactJS" />
@@ -45,6 +40,7 @@ const EduAndSkills = () => {
           <div className="skill-icons">
             <Icon imgUrl={RStudioLogo} alt="RStudio" logo="RStudio" />
             <Icon imgUrl={SQLLogo} alt="SQL" logo="SQL" />
+            <Icon imgUrl={JavaLogo} alt="Java" logo="Java" />
           </div>
         </div>
       </Card>

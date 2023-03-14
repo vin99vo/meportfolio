@@ -8,8 +8,17 @@
     font-size: 32px;
     margin: 0;
     padding: 0;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
 }
 p{
     line-height: 8px;
     text-align: left;
+}
+.title-container{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.title-container .Icon{
+    margin-left: 20px;
 }

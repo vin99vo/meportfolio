@@ -4,7 +4,12 @@
     background-color: lightblue;
     justify-content: space-between;
     margin: 0;
-    height: 100px;
+    padding: 2px 50px;
+    height: 60px;
+    color: white;
+    background-image: url('../../thumbnails/patterns/darkBluePattern.jpg');
+    background-blend-mode: multiply;
+    background-size: cover;
 }
 
 

@@ -5,7 +5,7 @@ import WorkExp from "./bodyparts/WorkExp";
 import "./Tabs.css";
 
 const Tabs = () => {
-  const [toggleTab, setToggleTab] = useState(1);
+  const [toggleTab, setToggleTab] = useState(0);
 
   const toggleTabHandler = (index) => {
     setToggleTab(index);
