@@ -2,11 +2,11 @@ import React from 'react'
 
 import './Icon.css';
 
-const Icon = (props) => {
+const Icon = ({classes, imgUrl, alt, logo}) => {
     return (
-        <div className=  {`Icon ${props.class}`}>
-            <img src={props.imgUrl} alt={props.alt}/>
-            <span>{props.logo}</span>
+        <div className=  {`Icon ${classes}`}>
+            <img src={imgUrl} alt={alt}/>
+            <span>{logo}</span>
         </div>
     )
 }

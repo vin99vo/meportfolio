@@ -1,8 +1,6 @@
 .Icon{
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    width: 100px;
     white-space: nowrap;
 }
 .Icon img{
@@ -17,6 +15,6 @@
     color: black;
 } */
 .Icon span{
-    margin-left: 4px;
+    padding-left: 4px;
     font-size: 16px;
 }
