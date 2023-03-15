@@ -17,13 +17,13 @@
   text-align: center;
   width: 50%;
   background: rgba(128, 128, 128, 0.075);
-  cursor:pointer;
+  cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.274);
   box-sizing: content-box;
   position: relative;
   outline: none;
   font-weight: bold;
-  }
+}
 
 .active-tabs {
   background: white;
@@ -67,4 +67,4 @@
 }
 .active-content {
   display: block;
-} 
+}

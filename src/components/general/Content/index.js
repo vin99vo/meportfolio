@@ -1,5 +1,5 @@
 import "./Content.css";
-import Description from "./Description";
+import Description from "../Description";
 
 const Content = ({ object }) => {
   const descript = object.description;

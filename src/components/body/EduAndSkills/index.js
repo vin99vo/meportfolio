@@ -44,25 +44,14 @@ const EduAndSkills = () => {
           <h2>Skills</h2>
           <div className="skill-icons">
             {skills.map((skill) => (
-              <Icon classes="skillIcon" imgUrl={skill.imgUrl} alt={skill.alt} logo={skill.logo} />
+              <Icon
+                classes="skillIcon"
+                imgUrl={skill.imgUrl}
+                alt={skill.alt}
+                logo={skill.logo}
+              />
             ))}
           </div>
-
-          {/* <div className="skill-icons">
-            <Icon imgUrl={ReactJSLogo} alt="ReactJS" logo="ReactJS" />
-            <Icon imgUrl={HTML5Logo} alt="HTML5" logo="HTML5" />
-            <Icon imgUrl={CSS3Logo} alt="CSS3" logo="CSS3" />
-          </div>
-          <div className="skill-icons">
-            <Icon imgUrl={JavaScriptLogo} alt="JavaScript" logo="JavaScript" />
-            <Icon imgUrl={ReduxLogo} alt="Redux" logo="Redux" />
-            <Icon imgUrl={TypeScriptLogo} alt="TypeScript" logo="TypeScript" />
-          </div>
-          <div className="skill-icons">
-            <Icon imgUrl={RStudioLogo} alt="RStudio" logo="RStudio" />
-            <Icon imgUrl={SQLLogo} alt="SQL" logo="SQL" />
-            <Icon imgUrl={JavaLogo} alt="Java" logo="Java" />
-          </div> */}
         </div>
       </Card>
     </div>

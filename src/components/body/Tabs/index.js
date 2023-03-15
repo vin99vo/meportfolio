@@ -1,7 +1,7 @@
 import { useState } from "react";
-import EduAndSkills from "./bodyparts/EduAndSkills";
-import ExtraCurricular from "./bodyparts/ExtraCurricular";
-import WorkExp from "./bodyparts/WorkExp";
+import EduAndSkills from "../EduAndSkills";
+import ExtraCurricular from "../ExtraCurricular";
+import WorkExp from "../WorkExp";
 import "./Tabs.css";
 
 const Tabs = () => {

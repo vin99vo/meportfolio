@@ -1,7 +1,6 @@
-
-import AboutMe from "./bodyparts/AboutMe";
+import AboutMe from "../AboutMe";
 import "./Body.css";
-import Tabs from "./Tabs";
+import Tabs from "../Tabs";
 
 const Body = () => {
   return (
@@ -10,6 +9,6 @@ const Body = () => {
       <Tabs />
     </div>
   );
-}
+};
 
 export default Body;
