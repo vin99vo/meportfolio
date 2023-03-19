@@ -1,8 +1,8 @@
-import "./App.css";
-import Header from "./components/Header/Header";
-import Body from "./components/body/Body";
+import './App.css'
+import { Header } from './components/Header/Header'
+import Body from './components/body/Body'
 
-const App = () => {
+export const App = (): JSX.Element => {
   // const creator = {
   //   author: "Vincent Vo",
   //   lastUpdate: "March 2023"
@@ -13,7 +13,5 @@ const App = () => {
       <Header />
       <Body />
     </div>
-  );
-};
-
-export default App;
+  )
+}
