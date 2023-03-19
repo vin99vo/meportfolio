@@ -1,6 +1,8 @@
-import Card from '../../general/Card'
 import './EduAndSkills.css'
+import { Card } from '../../general/Card'
 import { Icon } from '../../general/Icon'
+import { Content } from '../../general/Content'
+import { type FC } from 'react'
 import ReactJSLogo from '../../../thumbnails/icons/ReactJSLogo.png'
 import CSS3Logo from '../../../thumbnails/icons/CSS3Logo.png'
 import HTML5Logo from '../../../thumbnails/icons/HTML5Logo.png'
@@ -10,9 +12,8 @@ import TypeScriptLogo from '../../../thumbnails/icons/TypeScriptLogo.png'
 import RStudioLogo from '../../../thumbnails/icons/RStudioLogo.png'
 import SQLLogo from '../../../thumbnails/icons/SQLLogo.png'
 import JavaLogo from '../../../thumbnails/icons/javaLogo.png'
-import Content from '../../general/Content'
 
-const EduAndSkills = (): JSX.Element => {
+export const EduAndSkills: FC = () => {
   const contents = [
     {
       // title: '',
@@ -60,5 +61,3 @@ const EduAndSkills = (): JSX.Element => {
     </div>
   )
 }
-
-export default EduAndSkills

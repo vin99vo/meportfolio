@@ -1,10 +1,11 @@
 import './AboutMe.css'
-import Card from '../../general/Card'
+import { Card } from '../../general/Card'
 import { Icon } from '../../general/Icon'
 import frisbeeLogo from '../../../thumbnails/icons/frisbeeLogo.png'
 import PcLogo from '../../../thumbnails/icons/pcLogo.jpg'
+import { type FC } from 'react'
 
-const AboutMe = (): JSX.Element => {
+export const AboutMe: FC = () => {
   const about = [
     'Junior Web Developer',
     'Fast and Enthusiastic Learner',
@@ -26,5 +27,3 @@ const AboutMe = (): JSX.Element => {
     </div>
   )
 }
-
-export default AboutMe

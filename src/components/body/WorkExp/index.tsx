@@ -1,13 +1,14 @@
-import Card from '../../general/Card'
 import './WorkExp.css'
-import Content from '../../general/Content'
+import { Card } from '../../general/Card'
+import { Content } from '../../general/Content'
+import { type FC } from 'react'
 
-const WorkExp = (): JSX.Element => {
+export const WorkExp: FC = () => {
   const contents = [
     {
       title: 'Australian Bureau of Statistics, Melbourne',
       date: 'Nov 2022 – Present',
-      role: 'Associate',
+      role: 'Registers Specialist',
       description: [
         '• Liaise with businesses to understand data and formulate questions to improve information reliability.',
         '• Research key business data to ensure accuracy and update database systems correctly.',
@@ -43,5 +44,3 @@ const WorkExp = (): JSX.Element => {
     </div>
   )
 }
-
-export default WorkExp

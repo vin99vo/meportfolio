@@ -1,10 +1,11 @@
-import { useState } from 'react'
-import EduAndSkills from '../EduAndSkills'
-import ExtraCurricular from '../ExtraCurricular'
-import WorkExp from '../WorkExp'
 import './Tabs.css'
+import { useState } from 'react'
+import { EduAndSkills } from '../EduAndSkills'
+import { ExtraCurricular } from '../ExtraCurricular'
+import { WorkExp } from '../WorkExp'
+import { type FC } from 'react'
 
-const Tabs = (): JSX.Element => {
+export const Tabs: FC = () => {
   const [toggleTab, setToggleTab] = useState(0)
 
   const tabs = [
@@ -44,5 +45,3 @@ const Tabs = (): JSX.Element => {
     </div>
   )
 }
-
-export default Tabs

@@ -1,15 +1,14 @@
 import './Description.css'
+import { type FC } from 'react'
 
-interface descriptionProps {
+interface DescriptionProps {
   description: string
 }
 
-const Description = ({ description }: descriptionProps): JSX.Element => {
+export const Description: FC<DescriptionProps> = ({ description }) => {
   return (
     <div>
       <p>{description}</p>
     </div>
   )
 }
-
-export default Description

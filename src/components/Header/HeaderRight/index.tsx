@@ -1,8 +1,9 @@
 import LinkedInLogo from '../../../thumbnails/icons/LinkedInLogo.png'
 import { Icon } from '../../general/Icon'
 import './HeaderRight.css'
+import { type FC } from 'react'
 
-export const HeaderRight = (): JSX.Element => {
+export const HeaderRight: FC = () => {
   return (
     <div className="header-right">
       <a

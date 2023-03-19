@@ -1,4 +1,5 @@
 import './Icon.css'
+import { type FC } from 'react'
 
 interface IconProps {
   classes?: string | undefined
@@ -7,12 +8,7 @@ interface IconProps {
   logo?: string
 }
 
-export const Icon = ({
-  classes,
-  imgUrl,
-  alt,
-  logo
-}: IconProps): JSX.Element => {
+export const Icon: FC<IconProps> = ({ classes, imgUrl, alt, logo }) => {
   return classes != null ? (
     <div className={`Icon ${classes}`}>
       <img src={imgUrl} alt={alt} />

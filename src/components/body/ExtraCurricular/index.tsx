@@ -1,8 +1,9 @@
 import './ExtraCurricular.css'
-import Card from '../../general/Card'
-import Content from '../../general/Content'
+import { Card } from '../../general/Card'
+import { Content } from '../../general/Content'
+import { type FC } from 'react'
 
-const ExtraCurricular = (): JSX.Element => {
+export const ExtraCurricular: FC = () => {
   const contents = [
     {
       title: 'Heads of State Ultimate Frisbee Club',
@@ -39,5 +40,3 @@ const ExtraCurricular = (): JSX.Element => {
     </div>
   )
 }
-
-export default ExtraCurricular

@@ -1,8 +1,9 @@
-import AboutMe from '../AboutMe'
 import './Body.css'
-import Tabs from '../Tabs'
+import { AboutMe } from '../AboutMe'
+import { Tabs } from '../Tabs'
+import { type FC } from 'react'
 
-const Body = (): JSX.Element => {
+export const Body: FC = () => {
   return (
     <div className="body-container">
       <AboutMe />
@@ -10,5 +11,3 @@ const Body = (): JSX.Element => {
     </div>
   )
 }
-
-export default Body

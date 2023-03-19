@@ -1,17 +1,11 @@
 import './Card.css'
+import { type FC } from 'react'
 
 interface CardProps {
-  classes?: string | undefined
+  classes?: string
   children: React.ReactNode
 }
 
-const Card = ({ classes, children }: CardProps): JSX.Element => {
-  // const { classPass = '' } = classes
-  return classes != null ? (
-    <div className={`card-container ${classes}`}>{children}</div>
-  ) : (
-    <div className={'card-container'}>{children}</div>
-  )
+export const Card: FC<CardProps> = ({ classes, children }) => {
+  return <div className={`card-container ${classes ?? ''}`}>{children}</div>
 }
-
-export default Card
