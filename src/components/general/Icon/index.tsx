@@ -1,23 +1,20 @@
 import './Icon.css'
 import { type FC } from 'react'
+import { IconText, IconImage, IconWrapper } from './styles'
 
 type IconProps = {
+  isSmall: boolean
   classes?: string | undefined
   imgUrl: string
   alt: string
   logo?: string
 }
 
-export const Icon: FC<IconProps> = ({ classes, imgUrl, alt, logo }) => {
-  return classes != null ? (
-    <div className={`Icon ${classes}`}>
-      <img src={imgUrl} alt={alt} />
-      <span>{logo}</span>
-    </div>
-  ) : (
-    <div className="Icon">
-      <img src={imgUrl} alt={alt} />
-      <span>{logo}</span>
-    </div>
+export const Icon: FC<IconProps> = ({ isSmall, imgUrl, alt, logo }) => {
+  return (
+    <IconWrapper isSmall={isSmall}>
+      <IconImage isSmall={isSmall} src={imgUrl} alt={alt} />
+      <IconText>{logo}</IconText>
+    </IconWrapper>
   )
 }

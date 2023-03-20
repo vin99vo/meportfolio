@@ -12,6 +12,7 @@ import TypeScriptLogo from '../../../thumbnails/icons/TypeScriptLogo.png'
 import RStudioLogo from '../../../thumbnails/icons/RStudioLogo.png'
 import SQLLogo from '../../../thumbnails/icons/SQLLogo.png'
 import JavaLogo from '../../../thumbnails/icons/javaLogo.png'
+import { H2, SkillsContainer, SkillIconsContainer } from './styles'
 
 export const EduAndSkills: FC = () => {
   const contents = [
@@ -38,26 +39,25 @@ export const EduAndSkills: FC = () => {
   const contentList = contents.map((x, idx) => (
     <Content descript={x.description} key={idx} />
   ))
+
   return (
-    <div className="eduandskills">
-      <Card>
-        <h2 className="education">Education</h2>
-        {contentList}
-        <div className="skills-container">
-          <h2>Skills</h2>
-          <div className="skill-icons">
-            {skills.map((skill) => (
-              <Icon
-                classes="skillIcon"
-                imgUrl={skill.imgUrl}
-                alt={skill.alt}
-                logo={skill.logo}
-                key={skill.alt}
-              />
-            ))}
-          </div>
-        </div>
-      </Card>
-    </div>
+    <Card>
+      <H2>Education</H2>
+      {contentList}
+      <SkillsContainer>
+        <H2>Skills</H2>
+        <SkillIconsContainer>
+          {skills.map((skill) => (
+            <Icon
+              isSmall={false}
+              imgUrl={skill.imgUrl}
+              alt={skill.alt}
+              logo={skill.logo}
+              key={skill.alt}
+            />
+          ))}
+        </SkillIconsContainer>
+      </SkillsContainer>
+    </Card>
   )
 }

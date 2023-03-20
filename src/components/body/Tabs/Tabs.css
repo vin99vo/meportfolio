@@ -1,4 +1,4 @@
-.tabs-container {
+/* .tabs-container {
   display: flex;
   flex-direction: column;
   position: relative;
@@ -7,12 +7,12 @@
   margin: 20px auto 0;
   word-break: break-word;
   border: 1px solid rgba(0, 0, 0, 0.274);
-}
-.tabs-block {
+} */
+/* .tabs-block {
   display: flex;
-}
+} */
 
-.tab-title {
+/* .tab-title {
   padding: 10px 14px;
   text-align: center;
   width: 50%;
@@ -40,31 +40,15 @@
   width: calc(100% + 2px);
   height: 5px;
   background: rgb(238, 96, 45);
-}
+} */
 
-.content-tabs {
+/* .content-tabs {
   flex-grow: 1;
 }
 .content {
-  background: white;
-  width: 100%;
-  height: 100%;
   display: none;
 }
-.content h2 {
-  padding: 0px 0 5px 0px;
-}
 
-.content hr {
-  width: 100px;
-  height: 2px;
-  background: #222;
-  margin-bottom: 5px;
-}
-.content p {
-  width: 100%;
-  height: 100%;
-}
 .active-content {
   display: block;
-}
+} */

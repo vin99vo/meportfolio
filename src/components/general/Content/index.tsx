@@ -1,6 +1,7 @@
 import './Content.css'
 import { Description } from '../Description'
 import { type FC } from 'react'
+import { ContentBody, H3, H4, H5, Para } from './content.styles'
 
 type ObjectProps = {
   title?: string
@@ -15,11 +16,11 @@ export const Content: FC<ObjectProps> = ({ title, date, role, descript }) => {
   ))
 
   return (
-    <div className="contentbody">
-      <h3>{`${title ?? ''}`}</h3>
-      <h4>{`${date ?? ''}`}</h4>
-      <h5>{`${role ?? ''}`}</h5>
-      <p>{descriptList}</p>
-    </div>
+    <ContentBody>
+      <H3>{`${title ?? ''}`}</H3>
+      <H4>{`${date ?? ''}`}</H4>
+      <H5>{`${role ?? ''}`}</H5>
+      <Para>{descriptList}</Para>
+    </ContentBody>
   )
 }

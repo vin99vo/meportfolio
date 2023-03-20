@@ -2,6 +2,7 @@ import './ExtraCurricular.css'
 import { Card } from '../../general/Card'
 import { Content } from '../../general/Content'
 import { type FC } from 'react'
+import { H2 } from './styles'
 
 export const ExtraCurricular: FC = () => {
   const contents = [
@@ -32,11 +33,9 @@ export const ExtraCurricular: FC = () => {
     />
   ))
   return (
-    <div className="exc">
-      <Card>
-        <h2>Extra Curricular Activities</h2>
-        {contentList}
-      </Card>
-    </div>
+    <Card>
+      <H2>Extra Curricular Activities</H2>
+      {contentList}
+    </Card>
   )
 }

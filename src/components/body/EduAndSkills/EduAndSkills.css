@@ -1,4 +1,4 @@
-.eduandskills {
+/* .eduandskills {
   max-width: 1100px;
 }
 .education {
@@ -8,7 +8,7 @@
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   margin-bottom: 20px;
-}
+} */
 @media (max-width: 800px) {
   .skill-icons {
     grid-template-columns: 1fr;
@@ -19,9 +19,6 @@
     grid-template-columns: 1fr 1fr;
   }
 }
-.skillIcon {
-  padding: 40px 120px 0 120px;
-}
-.skills-container {
+/* .skills-container {
   padding-bottom: 20px auto;
-}
+} */
