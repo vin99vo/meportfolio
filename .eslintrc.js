@@ -23,6 +23,10 @@ module.exports = {
     'react/react-in-jsx-scope': 'off',
     // '@typescript-eslint/explicit-module-boundary-types': ['off'],
     // 'typescript-eslint/explicit-function-return-type': 'off'
-    'prettier/prettier': 0
+    'prettier/prettier': 0,
+    // '@typescript-eslint/prefer-function-type': 'error',
+    '@typescript-eslint/consistent-type-definitions': 'off'
+    // "no-console": "off",
+    // "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
   }
 }

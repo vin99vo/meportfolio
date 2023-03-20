@@ -2,7 +2,7 @@ import './Content.css'
 import { Description } from '../Description'
 import { type FC } from 'react'
 
-interface ObjectProps {
+type ObjectProps = {
   title?: string
   date?: string
   role?: string

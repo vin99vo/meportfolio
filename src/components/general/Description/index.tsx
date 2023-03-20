@@ -1,7 +1,7 @@
 import './Description.css'
 import { type FC } from 'react'
 
-interface DescriptionProps {
+type DescriptionProps = {
   description: string
 }
 

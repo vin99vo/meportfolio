@@ -1,7 +1,7 @@
 import './Icon.css'
 import { type FC } from 'react'
 
-interface IconProps {
+type IconProps = {
   classes?: string | undefined
   imgUrl: string
   alt: string
