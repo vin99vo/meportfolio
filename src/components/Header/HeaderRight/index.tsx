@@ -1,6 +1,5 @@
 import LinkedInLogo from '../../../thumbnails/icons/LinkedInLogo.png'
 import { Icon } from '../../general/Icon'
-import './HeaderRight.css'
 import { type FC } from 'react'
 import { LinkedInButton, HeaderRightWrapper } from './styles'
 

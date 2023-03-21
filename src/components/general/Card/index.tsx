@@ -1,6 +1,5 @@
-import './Card.css'
 import { type FC } from 'react'
-import { CardContainer } from './card.styles'
+import { CardContainer } from './styles'
 
 type CardProps = {
   classes?: string

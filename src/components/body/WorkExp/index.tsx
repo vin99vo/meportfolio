@@ -1,8 +1,6 @@
-import './WorkExp.css'
 import { Card } from '../../general/Card'
 import { Content } from '../../general/Content'
 import { type FC } from 'react'
-import { H2 } from './styles'
 
 export const WorkExp: FC = () => {
   const contents = [
@@ -38,7 +36,7 @@ export const WorkExp: FC = () => {
   ))
   return (
     <Card>
-      <H2>Work Experience</H2>
+      <h2>Work Experience</h2>
       {contentList}
     </Card>
   )

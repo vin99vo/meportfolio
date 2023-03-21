@@ -1,4 +1,3 @@
-import './EduAndSkills.css'
 import { Card } from '../../general/Card'
 import { Icon } from '../../general/Icon'
 import { Content } from '../../general/Content'
@@ -12,7 +11,7 @@ import TypeScriptLogo from '../../../thumbnails/icons/TypeScriptLogo.png'
 import RStudioLogo from '../../../thumbnails/icons/RStudioLogo.png'
 import SQLLogo from '../../../thumbnails/icons/SQLLogo.png'
 import JavaLogo from '../../../thumbnails/icons/javaLogo.png'
-import { H2, SkillsContainer, SkillIconsContainer } from './styles'
+import { SkillsContainer, SkillIconsContainer } from './styles'
 
 export const EduAndSkills: FC = () => {
   const contents = [
@@ -42,10 +41,10 @@ export const EduAndSkills: FC = () => {
 
   return (
     <Card>
-      <H2>Education</H2>
+      <h2>Education</h2>
       {contentList}
       <SkillsContainer>
-        <H2>Skills</H2>
+        <h2>Skills</h2>
         <SkillIconsContainer>
           {skills.map((skill) => (
             <Icon

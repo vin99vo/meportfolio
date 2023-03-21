@@ -1,7 +1,7 @@
-import './App.css'
 import { Header } from './components/Header/Header'
 import { Body } from './components/body/Body'
 import { type FC } from 'react'
+import { GlobalStyle } from './globalStyles'
 
 export const App: FC = () => {
   // const creator = {
@@ -10,7 +10,8 @@ export const App: FC = () => {
   // }
 
   return (
-    <div className="App">
+    <div>
+      <GlobalStyle />
       <Header />
       <Body />
     </div>

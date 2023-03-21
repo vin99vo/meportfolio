@@ -5,13 +5,12 @@ export const HeaderRightWrapper = styled.div`
   align-items: center;
 `
 export const LinkedInButton = styled.a`
-  margin: 0;
+  margin: auto;
   display: flex;
   align-items: center;
-  width: 60px;
   &:hover img {
     cursor: pointer;
-    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.4);
-    color: black;
+    box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.4);
+    color: #fefefe;
   }
 `

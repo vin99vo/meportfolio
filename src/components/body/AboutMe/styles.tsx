@@ -5,10 +5,7 @@ export const H2 = styled.h2`
   margin: 0;
   padding: 0;
 `
-export const Para = styled.p`
-  line-height: 8px;
-  text-align: left;
-`
+
 export const TitleWrapper = styled.div`
   display: flex;
   align-items: center;

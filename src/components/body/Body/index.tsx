@@ -1,4 +1,3 @@
-import './Body.css'
 import { AboutMe } from '../AboutMe'
 import { Tabs } from '../Tabs'
 import { type FC } from 'react'

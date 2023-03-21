@@ -1,10 +1,8 @@
-import './Icon.css'
 import { type FC } from 'react'
 import { IconText, IconImage, IconWrapper } from './styles'
 
 type IconProps = {
   isSmall: boolean
-  classes?: string | undefined
   imgUrl: string
   alt: string
   logo?: string

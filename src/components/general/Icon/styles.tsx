@@ -3,10 +3,12 @@ import styled from 'styled-components'
 export const IconWrapper = styled.div<{
   isSmall: boolean
 }>`
+  width: ${(props) => (props.isSmall ? '60px ' : '160px')};
   display: flex;
   align-items: center;
+  justify-content: ${(props) => (props.isSmall ? 'center ' : 'start')};
   white-space: nowrap;
-  padding: ${(props) => (props.isSmall ? '0 30px ' : '40px 120px 0 120px')};
+  padding: ${(props) => (props.isSmall ? '0 30px ' : '40px 90px')};
 `
 export const IconImage = styled.img<{ isSmall: boolean }>`
   width: ${(props) => (props.isSmall ? '40px' : '60px')};
@@ -15,6 +17,7 @@ export const IconImage = styled.img<{ isSmall: boolean }>`
   object-fit: cover;
 `
 export const IconText = styled.span`
-  padding-left: 4px;
+  padding-left: 6px;
   font-size: 16px;
+  font-weight: 500;
 `

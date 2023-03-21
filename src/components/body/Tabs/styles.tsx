@@ -8,6 +8,7 @@ export const TabButton = styled.button<{ isActive: boolean }>`
     props.isActive ? 'white' : 'rgba(128, 128, 128, 0.075)'};
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.274);
+  border-bottom: ${(props) => props.isActive && '1px solid transparent'};
   box-sizing: content-box;
   position: relative;
   outline: none;
@@ -24,6 +25,7 @@ export const TabButton = styled.button<{ isActive: boolean }>`
     width: calc(100% + 2px);
     height: 5px;
     background: rgb(238, 96, 45);
+    border-bottom: transparent;
   }`}
 `
 export const TabRows = styled.div`

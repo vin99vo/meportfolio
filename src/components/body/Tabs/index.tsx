@@ -1,4 +1,3 @@
-import './Tabs.css'
 import { useState } from 'react'
 import { EduAndSkills } from '../EduAndSkills'
 import { ExtraCurricular } from '../ExtraCurricular'
