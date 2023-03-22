@@ -2,6 +2,8 @@ import { Header } from './components/Header/Header'
 import { Body } from './components/body/Body'
 import { type FC } from 'react'
 import { GlobalStyle } from './globalStyles'
+import { Button } from './components/general/Button'
+import { BlurCards } from './components/general/BlurCard'
 
 export const App: FC = () => {
   // const creator = {
@@ -14,6 +16,8 @@ export const App: FC = () => {
       <GlobalStyle />
       <Header />
       <Body />
+      <Button />
+      <BlurCards />
     </div>
   )
 }
