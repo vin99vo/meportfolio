@@ -3,12 +3,12 @@ import styled from 'styled-components'
 export const IconWrapper = styled.div<{
   isSmall: boolean
 }>`
-  width: ${(props) => (props.isSmall ? '60px ' : '160px')};
+  width: ${(props) => (props.isSmall ? 'auto' : '160px')};
   display: flex;
   align-items: center;
   justify-content: ${(props) => (props.isSmall ? 'center ' : 'start')};
   white-space: nowrap;
-  padding: ${(props) => (props.isSmall ? '0 30px ' : '40px 90px')};
+  padding: ${(props) => (props.isSmall ? '0 10px ' : '40px 90px')};
 `
 export const IconImage = styled.img<{ isSmall: boolean }>`
   width: ${(props) => (props.isSmall ? '40px' : '60px')};

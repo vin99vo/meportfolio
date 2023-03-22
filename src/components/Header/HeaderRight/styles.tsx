@@ -5,7 +5,6 @@ export const HeaderRightWrapper = styled.div`
   align-items: center;
 `
 export const LinkedInButton = styled.a`
-  margin: auto;
   display: flex;
   align-items: center;
   &:hover img {

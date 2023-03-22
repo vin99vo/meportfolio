@@ -1,6 +1,6 @@
 import styled from 'styled-components'
 
-export const H2 = styled.h2`
+export const AboutMeTitle = styled.h2`
   font-size: 48px;
   margin: 0;
   padding: 0;

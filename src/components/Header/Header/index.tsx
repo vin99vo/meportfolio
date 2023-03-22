@@ -6,7 +6,7 @@ import headerBackImg from '../../../thumbnails/patterns/darkBluePattern.jpg'
 
 export const Header: FC = () => {
   return (
-    <HeaderWrapper HeaderBackground={headerBackImg}>
+    <HeaderWrapper headerBackground={headerBackImg}>
       <HeaderLeft />
       <HeaderRight />
     </HeaderWrapper>

@@ -1,6 +1,6 @@
 import { Description } from '../Description'
 import { type FC } from 'react'
-import { ContentBody } from './content.styles'
+import { ContentBody } from './styles'
 
 type ObjectProps = {
   title?: string

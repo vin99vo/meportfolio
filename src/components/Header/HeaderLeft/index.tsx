@@ -1,10 +1,10 @@
 import { type FC } from 'react'
-import { HeaderLeftWrapper, H1 } from './styles'
+import { HeaderLeftWrapper, NameTitle } from './styles'
 
 export const HeaderLeft: FC = () => {
   return (
     <HeaderLeftWrapper>
-      <H1>Vincent Vo</H1>
+      <NameTitle>Vincent Vo</NameTitle>
     </HeaderLeftWrapper>
   )
 }
