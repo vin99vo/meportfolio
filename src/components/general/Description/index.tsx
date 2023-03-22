@@ -1,4 +1,3 @@
-import './Description.css'
 import { type FC } from 'react'
 
 type DescriptionProps = {
@@ -6,9 +5,5 @@ type DescriptionProps = {
 }
 
 export const Description: FC<DescriptionProps> = ({ description }) => {
-  return (
-    <div>
-      <p>{description}</p>
-    </div>
-  )
+  return <p>{description}</p>
 }

@@ -1,9 +1,15 @@
-import './Tabs.css'
 import { useState } from 'react'
 import { EduAndSkills } from '../EduAndSkills'
 import { ExtraCurricular } from '../ExtraCurricular'
 import { WorkExp } from '../WorkExp'
 import { type FC } from 'react'
+import {
+  TabButton,
+  TabRows,
+  TabsContainer,
+  ContentInTabs,
+  ContentShow
+} from './styles'
 
 export const Tabs: FC = () => {
   const [toggleTab, setToggleTab] = useState(0)
@@ -15,33 +21,31 @@ export const Tabs: FC = () => {
   ]
 
   return (
-    <div className="tabs-container">
-      <div className="tabs-block">
+    <TabsContainer>
+      <TabRows>
         {tabs.map((tab) => (
-          <button
-            className={
-              toggleTab === tab.index ? 'tab-title active-tabs' : 'tab-title'
-            }
+          <TabButton
+            isActive={toggleTab === tab.index}
             key={tab.index}
             onClick={() => {
               setToggleTab(tab.index)
             }}
           >
             {tab.title}
-          </button>
+          </TabButton>
         ))}
-      </div>
-      <div className="content-tabs">
-        <div className={toggleTab === 1 ? 'content active-content' : 'content'}>
+      </TabRows>
+      <ContentInTabs>
+        <ContentShow isActive={toggleTab === 1}>
           <EduAndSkills />
-        </div>
-        <div className={toggleTab === 2 ? 'content active-content' : 'content'}>
+        </ContentShow>
+        <ContentShow isActive={toggleTab === 2}>
           <WorkExp />
-        </div>
-        <div className={toggleTab === 3 ? 'content active-content' : 'content'}>
+        </ContentShow>
+        <ContentShow isActive={toggleTab === 3}>
           <ExtraCurricular />
-        </div>
-      </div>
-    </div>
+        </ContentShow>
+      </ContentInTabs>
+    </TabsContainer>
   )
 }

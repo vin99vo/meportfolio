@@ -25,8 +25,9 @@ module.exports = {
     // 'typescript-eslint/explicit-function-return-type': 'off'
     'prettier/prettier': 0,
     // '@typescript-eslint/prefer-function-type': 'error',
-    '@typescript-eslint/consistent-type-definitions': 'off'
+    '@typescript-eslint/consistent-type-definitions': 'off',
     // "no-console": "off",
-    // "no-unused-vars": ["error", { "vars": "all", "args": "after-used", "ignoreRestSiblings": false }]
+    '@typescript-eslint/no-unused-vars': ['off'],
+    '@typescript-eslint/no-unused-imports': ['off']
   }
 }

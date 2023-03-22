@@ -1,9 +1,9 @@
-import './AboutMe.css'
 import { Card } from '../../general/Card'
 import { Icon } from '../../general/Icon'
 import frisbeeLogo from '../../../thumbnails/icons/frisbeeLogo.png'
 import PcLogo from '../../../thumbnails/icons/pcLogo.jpg'
 import { type FC } from 'react'
+import { AboutMeTitle, TitleWrapper, AboutMeWrapper } from './styles'
 
 export const AboutMe: FC = () => {
   const about = [
@@ -13,17 +13,17 @@ export const AboutMe: FC = () => {
   ]
 
   return (
-    <div className="aboutme">
+    <AboutMeWrapper>
       <Card>
-        <div className="title-container">
-          <Icon classes="PcLogo" imgUrl={PcLogo} alt="PcLogo" />
-          <h2>About me</h2>
-          <Icon classes="fris" imgUrl={frisbeeLogo} alt="frisbeeLogo" />
-        </div>
+        <TitleWrapper>
+          <Icon isSmall imgUrl={PcLogo} alt="PcLogo" />
+          <AboutMeTitle>About me</AboutMeTitle>
+          <Icon isSmall imgUrl={frisbeeLogo} alt="frisbeeLogo" />
+        </TitleWrapper>
         {about.map((aboutme, idx) => (
           <p key={idx}>&#x2022; {aboutme}</p>
         ))}
       </Card>
-    </div>
+    </AboutMeWrapper>
   )
 }

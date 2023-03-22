@@ -1,4 +1,3 @@
-import './WorkExp.css'
 import { Card } from '../../general/Card'
 import { Content } from '../../general/Content'
 import { type FC } from 'react'
@@ -36,11 +35,9 @@ export const WorkExp: FC = () => {
     />
   ))
   return (
-    <div className="workexp">
-      <Card>
-        <h2>Work Experience</h2>
-        {contentList}
-      </Card>
-    </div>
+    <Card>
+      <h2>Work Experience</h2>
+      {contentList}
+    </Card>
   )
 }

@@ -1,4 +1,3 @@
-import './ExtraCurricular.css'
 import { Card } from '../../general/Card'
 import { Content } from '../../general/Content'
 import { type FC } from 'react'
@@ -32,11 +31,9 @@ export const ExtraCurricular: FC = () => {
     />
   ))
   return (
-    <div className="exc">
-      <Card>
-        <h2>Extra Curricular Activities</h2>
-        {contentList}
-      </Card>
-    </div>
+    <Card>
+      <h2>Extra Curricular Activities</h2>
+      {contentList}
+    </Card>
   )
 }

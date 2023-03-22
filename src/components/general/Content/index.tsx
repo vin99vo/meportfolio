@@ -1,6 +1,6 @@
-import './Content.css'
 import { Description } from '../Description'
 import { type FC } from 'react'
+import { ContentBody } from './styles'
 
 type ObjectProps = {
   title?: string
@@ -15,11 +15,11 @@ export const Content: FC<ObjectProps> = ({ title, date, role, descript }) => {
   ))
 
   return (
-    <div className="contentbody">
+    <ContentBody>
       <h3>{`${title ?? ''}`}</h3>
       <h4>{`${date ?? ''}`}</h4>
       <h5>{`${role ?? ''}`}</h5>
       <p>{descriptList}</p>
-    </div>
+    </ContentBody>
   )
 }
