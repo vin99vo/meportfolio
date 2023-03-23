@@ -1,14 +1,11 @@
 import styled from 'styled-components'
 
-export const StandardButton = styled.button`
+export const InvertColourButton = styled.button`
   height: 40px;
-  width: 150px;
+  width: 200px;
   font-size: 16px;
   border-radius: 6px;
   border: 2px solid;
-`
-
-export const InvertColourButton = styled(StandardButton)`
   background-color: #233554;
   color: white;
   text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,

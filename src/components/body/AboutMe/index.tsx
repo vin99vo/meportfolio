@@ -8,7 +8,7 @@ import { AboutMeTitle, TitleWrapper, AboutMeWrapper } from './styles'
 export const AboutMe: FC = () => {
   const about = [
     'Junior Web Developer',
-    'Fast and Enthusiastic Learner',
+    'Curious Learner',
     'Melbourne, Australia'
   ]
 
@@ -17,7 +17,7 @@ export const AboutMe: FC = () => {
       <Card>
         <TitleWrapper>
           <Icon isSmall imgUrl={PcLogo} alt="PcLogo" />
-          <AboutMeTitle>About me</AboutMeTitle>
+          <AboutMeTitle>Hi, I&#39;m Vincent</AboutMeTitle>
           <Icon isSmall imgUrl={frisbeeLogo} alt="frisbeeLogo" />
         </TitleWrapper>
         {about.map((aboutme, idx) => (

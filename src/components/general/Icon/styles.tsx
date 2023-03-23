@@ -13,7 +13,7 @@ export const IconWrapper = styled.div<{
 export const IconImage = styled.img<{ isSmall: boolean }>`
   width: ${(props) => (props.isSmall ? '40px' : '60px')};
   height: ${(props) => (props.isSmall ? '40px' : '60px')};
-  border-radius: 30px;
+  border-radius: ${(props) => (props.isSmall ? '50%' : '0px')};
   object-fit: cover;
 `
 export const IconText = styled.span`

@@ -1,10 +1,10 @@
 import { useState, type FC } from 'react'
-import { InvertColourButton } from '../Button/styles'
+import { InvertColourButton } from '../InvertColourButton/styles'
 import { Content } from '../Content'
-import { BlurCard, BlurCardsContainer } from './styles'
+import { BlurCardFirst, BlurCardsContainer, BlurCardSecond } from './styles'
 
 export const BlurCards: FC = () => {
-  const [isHovered, setIsHovered] = useState(99)
+  const [isHovered, setIsHovered] = useState<number | null>(null)
 
   const blurDescript = [
     { name: 'one', exe: 'testing' },
@@ -18,25 +18,32 @@ export const BlurCards: FC = () => {
   const length = blurDescript.length
 
   return (
-    <BlurCardsContainer>
-      {blurDescript.map((x, index) => (
-        <BlurCard
-          key={index}
-          hoverBrowser={isHovered === 99}
-          hoverCard={isHovered === index}
-          onMouseOver={() => {
-            setIsHovered(index)
-          }}
-          onMouseOut={() => {
-            setIsHovered(99)
-          }}
-          length={length}
-        >
-          {x.name}
-          <p>{length}</p>
-          <p>{x.exe}</p>
-        </BlurCard>
-      ))}
-    </BlurCardsContainer>
+    <div>
+      <BlurCardsContainer>
+        {blurDescript.map((x, index) => (
+          <BlurCardFirst
+            key={index}
+            hoverBrowser={isHovered === null}
+            hoverCard={isHovered === index}
+            onMouseOver={() => {
+              setIsHovered(index)
+            }}
+            onMouseOut={() => {
+              setIsHovered(null)
+            }}
+            length={length}
+          >
+            {x.name}
+            <p>{length}</p>
+            <p>{x.exe}</p>
+          </BlurCardFirst>
+        ))}
+      </BlurCardsContainer>
+      <BlurCardsContainer>
+        <BlurCardSecond />
+        <BlurCardSecond />
+        <BlurCardSecond />
+      </BlurCardsContainer>
+    </div>
   )
 }
