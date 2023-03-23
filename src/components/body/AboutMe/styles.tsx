@@ -13,5 +13,5 @@ export const TitleWrapper = styled.div`
 `
 export const AboutMeWrapper = styled.div`
   margin: auto;
-  max-width: 500px;
+  max-width: 600px;
 `
