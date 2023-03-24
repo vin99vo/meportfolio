@@ -3,7 +3,7 @@ import { Icon } from '../../general/Icon'
 import { type FC } from 'react'
 import { LinkedInButton } from './styles'
 
-export const HeaderRight: FC = () => {
+export const FooterLeft: FC = () => {
   return (
     <LinkedInButton
       className="linkedin-button"

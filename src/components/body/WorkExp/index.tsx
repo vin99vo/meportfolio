@@ -1,8 +1,13 @@
 import { Card } from '../../general/Card'
 import { Content } from '../../general/Content'
 import { type FC } from 'react'
+import { WorkExpSection } from './styles'
 
-export const WorkExp: FC = () => {
+type WorkExpProps = {
+  passedID: string
+}
+
+export const WorkExp: FC<WorkExpProps> = ({ passedID }) => {
   const contents = [
     {
       title: 'Australian Bureau of Statistics, Melbourne',
@@ -35,9 +40,11 @@ export const WorkExp: FC = () => {
     />
   ))
   return (
-    <Card>
-      <h2>Work Experience</h2>
-      {contentList}
-    </Card>
+    <WorkExpSection id={passedID}>
+      <Card>
+        <h2>Work Experience</h2>
+        {contentList}
+      </Card>
+    </WorkExpSection>
   )
 }

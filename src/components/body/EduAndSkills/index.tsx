@@ -11,9 +11,17 @@ import TypeScriptLogo from '../../../thumbnails/icons/TypeScriptLogo.png'
 import RStudioLogo from '../../../thumbnails/icons/RStudioLogo.png'
 import SQLLogo from '../../../thumbnails/icons/SQLLogo.png'
 import JavaLogo from '../../../thumbnails/icons/javaLogo.png'
-import { SkillsContainer, SkillIconsContainer } from './styles'
+import {
+  SkillsContainer,
+  SkillIconsContainer,
+  SkillEduContainer
+} from './styles'
 
-export const EduAndSkills: FC = () => {
+type EduAndSkillsProps = {
+  passedID: string
+}
+
+export const EduAndSkills: FC<EduAndSkillsProps> = ({ passedID }) => {
   const contents = [
     {
       // title: '',
@@ -40,23 +48,25 @@ export const EduAndSkills: FC = () => {
   ))
 
   return (
-    <Card>
-      <h2>Education</h2>
-      {contentList}
-      <SkillsContainer>
-        <h2>Skills</h2>
-        <SkillIconsContainer>
-          {skills.map((skill) => (
-            <Icon
-              isSmall={false}
-              imgUrl={skill.imgUrl}
-              alt={skill.alt}
-              logo={skill.logo}
-              key={skill.alt}
-            />
-          ))}
-        </SkillIconsContainer>
-      </SkillsContainer>
-    </Card>
+    <SkillEduContainer id={passedID}>
+      <Card>
+        <h2>Education</h2>
+        {contentList}
+        <SkillsContainer>
+          <h2>Skills</h2>
+          <SkillIconsContainer>
+            {skills.map((skill) => (
+              <Icon
+                isSmall={false}
+                imgUrl={skill.imgUrl}
+                alt={skill.alt}
+                logo={skill.logo}
+                key={skill.alt}
+              />
+            ))}
+          </SkillIconsContainer>
+        </SkillsContainer>
+      </Card>
+    </SkillEduContainer>
   )
 }

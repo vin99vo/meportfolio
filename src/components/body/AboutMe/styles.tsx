@@ -11,7 +11,10 @@ export const TitleWrapper = styled.div`
   align-items: center;
   justify-content: center;
 `
-export const AboutMeWrapper = styled.div`
+export const AboutMeWrapper = styled.section`
   margin: auto;
   max-width: 600px;
+  height: 100vh;
+  display: flex;
+  align-items: center;
 `

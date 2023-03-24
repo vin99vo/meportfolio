@@ -1,14 +1,16 @@
 import styled from 'styled-components'
 
-export const TabButton = styled.button<{
+export const TabButton = styled.a<{
   isClickedMe: boolean
   isActive: boolean
 }>`
+  color: ${(props) => (props.isActive ? 'rgb(238, 96, 45)' : 'white')};
   padding: 20px 20px;
   margin: 20px 0;
   text-align: center;
-  width: 300px;
-  background: ${(props) => (props.isActive ? 'white' : 'rgb(212, 212, 212)')};
+  width: 100px;
+  background: ${(props) =>
+    props.isActive ? 'rgba(220, 220, 220, 0.916)' : 'rgb(69, 68, 68)'};
   cursor: pointer;
   border: 1px solid rgba(0, 0, 0, 0.274);
   border-bottom: ${(props) => props.isActive && '1px solid transparent'};
@@ -42,41 +44,44 @@ export const TabButton = styled.button<{
   }`}
   &:hover {
     background-color: white;
+    color: rgb(238, 96, 45);
   }
   z-index: 2;
   display: block;
   opacity: ${(props) => (props.isClickedMe ? '1' : '0')};
   transform: translateY(${(props) => (props.isClickedMe ? '0px' : '-10px')});
+  scroll-behavior: smooth;
 `
 export const TabRows = styled.div`
-  /* display: flex; */
+  position: fixed;
+  inset: 180px auto auto 80px;
 `
-export const TabsContainer = styled.div`
-  display: flex;
-  max-width: 1600px;
-  margin: 20px auto;
-`
+export const TabsContainer = styled.div``
 export const ContentInTabs = styled.div<{ isClickedMe: boolean }>`
-  position: relative;
   flex-grow: 1;
-  opacity: ${(props) => (props.isClickedMe ? '1' : '0')};
+  margin: auto;
 `
-export const ContentShow = styled.div<{ isActive: boolean }>`
-  z-index: 1;
-  position: absolute;
-  width: 100%;
-  transition: 0.3s all ease-in-out; /* here */
-  /* display: ${(props) => (props.isActive ? 'block' : 'none')}; */
-  opacity: ${(props) => (props.isActive ? '1' : '0')};
-  transform: ${(props) =>
-    props.isActive ? 'translateY(0)' : 'translateY(-20px)'};
-`
+export const Section = styled.section``
 export const DropDownContainer = styled.div`
-  position: relative;
-  max-width: 1600px;
-  /* background: #f1f1f1; */
-  margin: 20px auto 0;
-  word-break: break-word;
-  border: none;
-  text-align: left;
+  z-index: 2;
+`
+
+export const InvertColourButton = styled.button`
+  height: 40px;
+  width: 200px;
+  font-size: 16px;
+  border-radius: 6px;
+  border: 2px solid;
+  background-color: #233554;
+  color: white;
+  text-shadow: 0 0 7px #fff, 0 0 10px #fff, 0 0 21px #fff, 0 0 42px #0fa,
+    0 0 82px #0fa, 0 0 92px #0fa, 0 0 102px #0fa, 0 0 151px #0fa;
+
+  transition: 0.4s ease-in;
+  &:hover {
+    background-color: white;
+    color: #233554;
+  }
+  position: fixed;
+  inset: 140px auto auto 80px;
 `

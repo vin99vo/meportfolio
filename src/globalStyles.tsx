@@ -1,10 +1,15 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
+    /* html,
+    body {
+        overflow: hidden;
+    } */
     body{
-        background-color: rgba(63, 61, 61, 0.644);
+        background-color: #233554;
         background-image: url('');
         height: 3000px;
+        color: white;
     }
     h2{ 
         text-align: center;

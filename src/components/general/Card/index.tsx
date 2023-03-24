@@ -1,5 +1,5 @@
 import { type FC } from 'react'
-import { CardContainer } from './styles'
+import { CardContainer, FullScreenContainer } from './styles'
 
 type CardProps = {
   classes?: string
@@ -7,5 +7,9 @@ type CardProps = {
 }
 
 export const Card: FC<CardProps> = ({ children }) => {
-  return <CardContainer>{children}</CardContainer>
+  return (
+    <FullScreenContainer>
+      <CardContainer>{children}</CardContainer>
+    </FullScreenContainer>
+  )
 }
