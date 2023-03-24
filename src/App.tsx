@@ -4,7 +4,6 @@ import { type FC } from 'react'
 import { GlobalStyle } from './globalStyles'
 import { Button } from './components/general/InvertColourButton'
 import { BlurCards } from './components/general/BlurCard'
-import './app.css'
 
 export const App: FC = () => {
   // const creator = {
