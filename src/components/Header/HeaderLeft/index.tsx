@@ -2,5 +2,9 @@ import { type FC } from 'react'
 import { NameTitle } from './styles'
 
 export const HeaderLeft: FC = () => {
-  return <NameTitle>Vincent Vo</NameTitle>
+  return (
+    <div>
+      <NameTitle>Vincent Vo</NameTitle>
+    </div>
+  )
 }

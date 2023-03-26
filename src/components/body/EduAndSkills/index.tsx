@@ -17,11 +17,7 @@ import {
   SkillEduContainer
 } from './styles'
 
-type EduAndSkillsProps = {
-  passedID: string
-}
-
-export const EduAndSkills: FC<EduAndSkillsProps> = ({ passedID }) => {
+export const EduAndSkills: FC = () => {
   const contents = [
     {
       // title: '',
@@ -48,7 +44,7 @@ export const EduAndSkills: FC<EduAndSkillsProps> = ({ passedID }) => {
   ))
 
   return (
-    <SkillEduContainer id={passedID}>
+    <SkillEduContainer>
       <Card>
         <h2>Education</h2>
         {contentList}

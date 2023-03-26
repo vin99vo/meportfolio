@@ -17,7 +17,6 @@ export const App: FC = () => {
       <HeaderLeft />
       <FooterLeft />
       <Tabs />
-      {/* <Button /> */}
       {/* <BlurCards /> */}
     </div>
   )

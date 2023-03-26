@@ -1,10 +1,6 @@
 import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
-    /* html,
-    body {
-        overflow: hidden;
-    } */
     body{
         background-color: #233554;
         background-image: url('');

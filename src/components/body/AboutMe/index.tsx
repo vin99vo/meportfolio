@@ -5,11 +5,7 @@ import PcLogo from '../../../thumbnails/icons/pcLogo.jpg'
 import { type FC } from 'react'
 import { AboutMeTitle, TitleWrapper, AboutMeWrapper } from './styles'
 
-type AboutMeProps = {
-  passedID: string
-}
-
-export const AboutMe: FC<AboutMeProps> = ({ passedID }) => {
+export const AboutMe: FC = () => {
   const about = [
     'Junior Web Developer',
     'Curious Learner',
@@ -17,12 +13,11 @@ export const AboutMe: FC<AboutMeProps> = ({ passedID }) => {
   ]
 
   return (
-    <AboutMeWrapper id={passedID}>
+    <AboutMeWrapper>
       <Card>
         <TitleWrapper>
           <Icon isSmall imgUrl={PcLogo} alt="PcLogo" />
-          <AboutMeTitle>Hi, I&#39;m Vincent</AboutMeTitle>
-          <Icon isSmall imgUrl={frisbeeLogo} alt="frisbeeLogo" />
+          <AboutMeTitle>Front-End Software Developer</AboutMeTitle>
         </TitleWrapper>
         {about.map((aboutme, idx) => (
           <p key={idx}>&#x2022; {aboutme}</p>

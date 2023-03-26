@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from 'react'
+import { useRef, useState } from 'react'
 import { EduAndSkills } from '../EduAndSkills'
 import { ExtraCurricular } from '../ExtraCurricular'
 import { WorkExp } from '../WorkExp'
@@ -11,9 +11,20 @@ import {
   ContentInTabs,
   DropDownContainer,
   InvertColourButton,
-  Section
+  Section,
+  Hamburger
 } from './styles'
 import { Contact } from '../Contact'
+
+const HamburgerIcon: FC = () => {
+  return (
+    <div>
+      <Hamburger />
+      <Hamburger />
+      <Hamburger />
+    </div>
+  )
+}
 
 export const Tabs: FC = () => {
   const [toggleTab, setToggleTab] = useState('')
@@ -33,27 +44,27 @@ export const Tabs: FC = () => {
   const sections: SectionType[] = [
     {
       ref: aboutRef,
-      component: <AboutMe passedID="About" />,
+      component: <AboutMe />,
       title: 'About Me'
     },
     {
       ref: eduRef,
-      component: <EduAndSkills passedID="Edu" />,
+      component: <EduAndSkills />,
       title: 'Education and Skills'
     },
     {
       ref: workRef,
-      component: <WorkExp passedID="Work" />,
+      component: <WorkExp />,
       title: 'Work Experience'
     },
     {
       ref: extraRef,
-      component: <ExtraCurricular passedID="Extra" />,
+      component: <ExtraCurricular />,
       title: 'Extra Curricular'
     },
     {
       ref: contactRef,
-      component: <Contact passedID="Contact" />,
+      component: <Contact />,
       title: 'Contact'
     }
   ]
@@ -73,15 +84,15 @@ export const Tabs: FC = () => {
             console.log(isClickedMe)
           }}
         >
-          Click me
+          <HamburgerIcon />
         </InvertColourButton>
         <TabRows>
+          {isClickedMe}
           {sections.map((section) => (
             <TabButton
               isClickedMe={isClickedMe}
               isActive={toggleTab === section.title}
               key={section.title}
-              // href={tab.to}
               onClick={() => {
                 onTabClickHandler(section)
               }}
