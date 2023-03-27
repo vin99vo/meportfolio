@@ -4,7 +4,6 @@ import { type FC } from 'react'
 import {
   ContactWrapper,
   GetInTouch,
-  BlurCardsContainer,
   ContactDescriptContainer,
   ContactDescript,
   LinkButton
@@ -12,12 +11,6 @@ import {
 import { BlurCards } from '../../general/BlurCard'
 
 export const Contact: FC = () => {
-  const about = [
-    'Junior Web Developer',
-    'Curious Learner',
-    'Melbourne, Australia'
-  ]
-
   return (
     <ContactWrapper>
       <ContactDescriptContainer>
@@ -34,9 +27,7 @@ export const Contact: FC = () => {
           Say Hello
         </LinkButton>
       </ContactDescriptContainer>
-      <BlurCardsContainer>
-        <BlurCards />
-      </BlurCardsContainer>
+      <BlurCards />
     </ContactWrapper>
   )
 }

@@ -2,8 +2,8 @@ import { type FC } from 'react'
 import { GlobalStyle } from './globalStyles'
 import { BlurCards } from './components/general/BlurCard'
 import { HeaderLeft } from './components/Header/HeaderLeft'
-import { FooterLeft } from './components/Header/FooterLeft'
-import { Tabs } from './components/body/Tabs'
+import { HeaderRight } from './components/Header/HeaderRight'
+import { Tabs } from './components/Tabs'
 
 export const App: FC = () => {
   // const creator = {
@@ -12,12 +12,12 @@ export const App: FC = () => {
   // }
 
   return (
-    <div>
+    <>
       <GlobalStyle />
       <HeaderLeft />
-      <FooterLeft />
+      <HeaderRight />
       <Tabs />
       {/* <BlurCards /> */}
-    </div>
+    </>
   )
 }

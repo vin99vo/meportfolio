@@ -4,7 +4,6 @@ export const GlobalStyle = createGlobalStyle`
     body{
         background-color: #233554;
         background-image: url('');
-        height: 3000px;
         color: white;
     }
     h2{ 

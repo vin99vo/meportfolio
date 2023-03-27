@@ -12,7 +12,7 @@ export const Icon: FC<IconProps> = ({ isSmall, imgUrl, alt, logo }) => {
   return (
     <IconWrapper isSmall={isSmall}>
       <IconImage isSmall={isSmall} src={imgUrl} alt={alt} />
-      <IconText>{logo}</IconText>
+      {Boolean(logo) && <IconText>{logo}</IconText>}
     </IconWrapper>
   )
 }

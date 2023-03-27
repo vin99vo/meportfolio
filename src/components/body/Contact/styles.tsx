@@ -1,39 +1,31 @@
 import styled from 'styled-components'
 
 export const ContactWrapper = styled.section`
-  height: 100vh;
   display: flex;
   flex-direction: column;
-  vertical-align: middle;
   justify-content: center;
+  text-align: center;
 `
 export const GetInTouch = styled.div`
   color: rgb(238, 96, 45);
   font-size: 60px;
   font-weight: 900;
-  display: flex;
-  justify-content: center;
-  align-items: center;
   padding: 0 auto;
 `
 export const ContactDescriptContainer = styled.div`
   margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 `
 export const ContactDescript = styled.div`
   display: flex;
   justify-content: center;
-  text-align: center;
   font-size: 36px;
-  width: 600px;
+  width: min(80%, 600px);
   margin: 5px auto;
 `
 
-export const BlurCardsContainer = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 80%;
-`
 export const LinkButton = styled.button`
   height: 60px;
   width: 220px;

@@ -11,6 +11,12 @@ export const LinksButton = styled.a`
   }
 `
 export const LinksButtonWrapper = styled.div`
+  display: flex;
+  gap: 10px;
   position: fixed;
-  inset: auto auto 120px 80px;
+  inset: 10px 10px auto auto;
+  @media (max-width: 600px) {
+    position: absolute;
+    inset: 10px 10px auto auto;
+  }
 `
