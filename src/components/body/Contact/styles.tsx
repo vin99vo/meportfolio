@@ -5,6 +5,7 @@ export const ContactWrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   text-align: center;
+  background-color: #285704;
 `
 export const GetInTouch = styled.div`
   color: rgb(238, 96, 45);

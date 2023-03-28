@@ -48,8 +48,8 @@ export const ContentInTabs = styled.div`
   margin: auto;
 `
 export const Section = styled.section`
-  padding-top: 50px;
-  padding-bottom: 50px;
+  padding-top: 80px;
+  padding-bottom: 80px;
 `
 
 export const DropDownContainer = styled.div``

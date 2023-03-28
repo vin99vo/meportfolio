@@ -1,6 +1,6 @@
 import { useRef, useState } from 'react'
 import { AboutMe } from '../body/AboutMe'
-import { WorkExp } from '../body/WorkExp'
+import { Projects } from '../body/Projects'
 import { Home } from '../body/Home'
 import { type ReactNode, type RefObject, type FC } from 'react'
 import {
@@ -20,7 +20,7 @@ export const Tabs: FC = () => {
 
   const homeRef = useRef<HTMLElement | null>(null)
   const aboutRef = useRef<HTMLElement | null>(null)
-  const workRef = useRef<HTMLElement | null>(null)
+  const projectsRef = useRef<HTMLElement | null>(null)
   const contactRef = useRef<HTMLElement | null>(null)
 
   type SectionType = {
@@ -40,9 +40,9 @@ export const Tabs: FC = () => {
       title: 'AboutMe'
     },
     {
-      ref: workRef,
-      component: <WorkExp />,
-      title: 'Work Experience'
+      ref: projectsRef,
+      component: <Projects />,
+      title: 'Projects'
     },
     {
       ref: contactRef,

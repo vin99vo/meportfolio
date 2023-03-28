@@ -8,6 +8,7 @@ export const HomeWrapper = styled.section`
   flex-wrap: wrap;
   gap: 60px;
   margin-bottom: 80px;
+  background-color: #231403;
 `
 export const HomeOuterDiv = styled.div`
   width: min(90%, 800px);
@@ -19,10 +20,11 @@ export const HiOpening = styled.p`
   color: rgb(238, 96, 45);
   font-size: 20px;
 `
-export const MyName = styled.p`
+export const MyName = styled.div`
   font-size: 52px;
   font-weight: 900;
   padding: 30px 0 0 0;
+  line-height: normal;
 `
 
 export const HomeSubtitle = styled.p`

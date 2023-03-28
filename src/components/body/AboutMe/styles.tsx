@@ -3,7 +3,7 @@ import styled from 'styled-components'
 export const AboutMeContainer = styled.div`
   display: flex;
   justify-content: center;
-  margin-bottom: 80px;
+  background-color: #0c4e8784;
 `
 export const AboutMeTitle = styled.div`
   color: rgb(238, 96, 45);

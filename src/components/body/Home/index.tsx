@@ -10,9 +10,12 @@ import {
   MyName,
   HiOpening
 } from './styles'
+import { HackerName } from '../../general/HackerName'
 
 export const Home: FC = () => {
   const about = []
+
+  const name = 'Vincent Vo.'
 
   return (
     <HomeWrapper>
@@ -20,7 +23,7 @@ export const Home: FC = () => {
       <HomeOuterDiv>
         <Card>
           <HiOpening>Hi, my name is </HiOpening>
-          <MyName>Vincent Vo.</MyName>
+          <HackerName text={name} />
           <HomeSubtitle>Front-End Software Developer.</HomeSubtitle>
           <HomePara>
             I focus on delivering seamless digital experiences and responsive
