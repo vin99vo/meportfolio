@@ -1,5 +1,5 @@
 import { Card } from '../../general/Card'
-import { type FC } from 'react'
+import { useState, type FC } from 'react'
 import { Icon } from '../../general/Icon'
 import ReactJSLogo from '../../../thumbnails/icons/ReactJSLogo.png'
 import CSS3Logo from '../../../thumbnails/icons/CSS3Logo.png'
@@ -13,18 +13,22 @@ import {
   ProjectCardFront,
   ProjectCardBack,
   SkillIconsContainer,
-  CenterSkillIcons
+  CenterSkillIcons,
+  ProjectCardExpand
 } from './styles'
 import { SqueezeTitle } from '../../general/SectionTitle'
 
 export const Projects: FC = () => {
+  const [isCardClicked, setIsCardClicked] = useState(false)
   const skills = [
     { imgUrl: ReactJSLogo, alt: 'ReactJS', logo: 'ReactJS' },
     { imgUrl: HTML5Logo, alt: 'HTML5', logo: 'HTML5' },
     { imgUrl: CSS3Logo, alt: 'CSS3', logo: 'CSS3' }
   ]
 
-  const backClickedHandler = (): void => {}
+  const cardClickedHandler = (): void => {
+    setIsCardClicked(true)
+  }
   return (
     <ProjectsSection>
       <Card>
@@ -33,17 +37,21 @@ export const Projects: FC = () => {
         </ProjectTitle>
         <ProjectsContainer>
           <ProjectCardContainer>
-            <ProjectCard>
+            <ProjectCard onClick={cardClickedHandler}>
               <ProjectCardFront>
                 <p>Portfolio website</p>
               </ProjectCardFront>
-              <ProjectCardBack onClick={backClickedHandler}>
+              <ProjectCardBack>
                 <p>
                   This portfolio website is the first project I have build ever
                   since i started my journey as a web developer.
                 </p>
                 <p>This portfolio is powered by</p>
                 <p>This portfolio is powered by</p>
+                <p> &#8594; React</p>
+              </ProjectCardBack>
+              <ProjectCardExpand>
+                Hello me expansion
                 <CenterSkillIcons>
                   <SkillIconsContainer>
                     {skills.map((skill) => (
@@ -57,7 +65,7 @@ export const Projects: FC = () => {
                     ))}
                   </SkillIconsContainer>
                 </CenterSkillIcons>
-              </ProjectCardBack>
+              </ProjectCardExpand>
             </ProjectCard>
           </ProjectCardContainer>
         </ProjectsContainer>

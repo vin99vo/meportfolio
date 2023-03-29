@@ -31,6 +31,9 @@ export const ProjectCardContainer = styled.div`
   position: relative;
   transform: scale(0.9);
   transition: 0.3s all ease-in;
+  &:hover {
+    cursor: pointer;
+  }
   &:hover > ${ProjectCard} {
     transform: rotateY(180deg);
   }
@@ -80,4 +83,8 @@ export const CenterSkillIcons = styled.div`
   display: flex;
   justify-content: center;
   width: min(80% 800px);
+`
+export const ProjectCardExpand = styled.div`
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
 `
