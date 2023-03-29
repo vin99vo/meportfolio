@@ -11,6 +11,7 @@ import {
   HiOpening
 } from './styles'
 import { HackerName } from '../../general/HackerName'
+import { SqueezeTitle } from '../../general/SectionTitle'
 
 export const Home: FC = () => {
   const about = []
@@ -24,7 +25,9 @@ export const Home: FC = () => {
         <Card>
           <HiOpening>Hi, my name is </HiOpening>
           <HackerName text={name} />
-          <HomeSubtitle>Front-End Software Developer.</HomeSubtitle>
+          <HomeSubtitle>
+            <SqueezeTitle title="Front-End Software Developer." />
+          </HomeSubtitle>
           <HomePara>
             I focus on delivering seamless digital experiences and responsive
             layouts. My goal is to bring your ideas to life.

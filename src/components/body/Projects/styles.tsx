@@ -6,6 +6,15 @@ export const ProjectsSection = styled.section`
   margin-bottom: 80px;
   background-color: #094343;
 `
+export const ProjectTitle = styled.div`
+  color: rgb(238, 96, 45);
+  font-size: 52px;
+  font-weight: 900;
+  padding: 10px auto;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+`
 export const ProjectsContainer = styled.div`
   width: 100vh;
 `

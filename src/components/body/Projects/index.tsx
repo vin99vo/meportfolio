@@ -6,6 +6,7 @@ import CSS3Logo from '../../../thumbnails/icons/CSS3Logo.png'
 import HTML5Logo from '../../../thumbnails/icons/HTML5Logo.png'
 import {
   ProjectsSection,
+  ProjectTitle,
   ProjectsContainer,
   ProjectCardContainer,
   ProjectCard,
@@ -14,6 +15,7 @@ import {
   SkillIconsContainer,
   CenterSkillIcons
 } from './styles'
+import { SqueezeTitle } from '../../general/SectionTitle'
 
 export const Projects: FC = () => {
   const skills = [
@@ -26,7 +28,9 @@ export const Projects: FC = () => {
   return (
     <ProjectsSection>
       <Card>
-        <h2>Projects</h2>
+        <ProjectTitle>
+          <SqueezeTitle title="Projects" />
+        </ProjectTitle>
         <ProjectsContainer>
           <ProjectCardContainer>
             <ProjectCard>

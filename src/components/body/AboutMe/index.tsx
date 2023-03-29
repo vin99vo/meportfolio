@@ -20,6 +20,7 @@ import {
   AboutMeContainer,
   CenterSkillIcons
 } from './styles'
+import { SqueezeTitle } from '../../general/SectionTitle'
 
 export const AboutMe: FC = () => {
   const skills = [
@@ -37,7 +38,9 @@ export const AboutMe: FC = () => {
   return (
     <AboutMeContainer>
       <Card>
-        <AboutMeTitle>About Me</AboutMeTitle>
+        <AboutMeTitle>
+          <SqueezeTitle title="About Me" />
+        </AboutMeTitle>
         <AboutMePara>
           Interested in all aspects of the front-end spectrum to optimize the
           best outcome for User Experience.

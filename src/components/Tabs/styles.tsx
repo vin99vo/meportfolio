@@ -32,6 +32,7 @@ export const TabButton = styled.a<{
   &:hover {
     background-color: white;
     color: rgb(238, 96, 45);
+    box-shadow: -2px 0 rgb(238, 96, 45);
   }
   display: block;
   scroll-behavior: smooth;

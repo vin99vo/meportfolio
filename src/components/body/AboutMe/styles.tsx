@@ -11,6 +11,8 @@ export const AboutMeTitle = styled.div`
   font-weight: 900;
   padding: 10px auto;
   text-align: center;
+  display: flex;
+  justify-content: center;
 `
 export const AboutMePara = styled.p`
   font-size: 24px;
