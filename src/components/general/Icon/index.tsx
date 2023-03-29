@@ -1,4 +1,4 @@
-import { type FC } from 'react'
+import { useState, type FC } from 'react'
 import { IconText, IconImage, IconWrapper } from './styles'
 
 type IconProps = {
@@ -9,10 +9,21 @@ type IconProps = {
 }
 
 export const Icon: FC<IconProps> = ({ isSmall, imgUrl, alt, logo }) => {
+  const [iconHovered, setIconHovered] = useState(false)
+
+  const IconHoverHandler = (): void => {
+    setIconHovered(true)
+  }
   return (
     <IconWrapper isSmall={isSmall}>
-      <IconImage isSmall={isSmall} src={imgUrl} alt={alt} />
-      <IconText>{logo}</IconText>
+      <IconImage
+        isSmall={isSmall}
+        src={imgUrl}
+        alt={alt}
+        onMouseOver={IconHoverHandler}
+        iconHovered={iconHovered}
+      />
+      {Boolean(logo) && <IconText iconHovered={iconHovered}>{logo}</IconText>}
     </IconWrapper>
   )
 }

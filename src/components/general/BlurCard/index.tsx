@@ -1,49 +1,79 @@
-import { useState, type FC } from 'react'
-import { InvertColourButton } from '../InvertColourButton/styles'
-import { Content } from '../Content'
-import { BlurCardFirst, BlurCardsContainer, BlurCardSecond } from './styles'
+import { type FC } from 'react'
+import collabImg from '../../../thumbnails/icons/collabImg.jpg'
+import mailImg from '../../../thumbnails/icons/mailImg.png'
+import linkedinImg from '../../../thumbnails/icons/linkedinImg.jpg'
+import {
+  BlurCardsContainer,
+  BlurCard,
+  TextContainer,
+  BlurCardPara,
+  LinkContainer,
+  CardImg,
+  OuterContainer
+} from './styles'
 
 export const BlurCards: FC = () => {
-  const [isHovered, setIsHovered] = useState<number | null>(null)
+  type BlurObjectsType = {
+    imgUrl: string
+    href?: string
+    target?: string
+    rel?: string
+    paraObj: string
+    linkButtonDescript: string
+    onClick?: React.MouseEventHandler<HTMLButtonElement> | undefined
+  }
 
-  const blurDescript = [
-    { name: 'one', exe: 'testing' },
-    { name: 'three', exe: 'this is hard' },
-    { name: 'five', exe: 'send help' },
-    { name: 'six', exe: 'nice work' },
-    { name: 'seven', exe: 'we did it' },
-    { name: 'eight', exe: 'let me sleep' },
-    { name: 'nine', exe: 'ooga booga' }
+  const BlurObjects: BlurObjectsType[] = [
+    {
+      imgUrl: collabImg,
+      href: 'https://github.com/vin99vo/meportfolio',
+      target: '_blank',
+      rel: 'noreferrer',
+      paraObj: 'Designed & Built by Vincent Vo.',
+      linkButtonDescript: 'Find my code on GitHub.'
+    },
+    {
+      imgUrl: mailImg,
+      href: 'mailto:vin.vo1999@gmail.com',
+      target: '_blank',
+      rel: 'noreferrer',
+      paraObj: 'Send me an email at ',
+      linkButtonDescript: 'vin.vo1999@gmail.com'
+    },
+    {
+      imgUrl: linkedinImg,
+      href: 'https://www.linkedin.com/in/vinvo1/',
+      target: '_blank',
+      rel: 'noreferrer',
+      paraObj: 'Reach out to me on ',
+      linkButtonDescript: 'LinkedIn'
+    }
   ]
-  const length = blurDescript.length
-
   return (
-    <div>
+    <OuterContainer>
       <BlurCardsContainer>
-        {blurDescript.map((x, index) => (
-          <BlurCardFirst
-            key={index}
-            hoverBrowser={isHovered === null}
-            hoverCard={isHovered === index}
-            onMouseOver={() => {
-              setIsHovered(index)
-            }}
-            onMouseOut={() => {
-              setIsHovered(null)
-            }}
-            length={length}
-          >
-            {x.name}
-            <p>{length}</p>
-            <p>{x.exe}</p>
-          </BlurCardFirst>
+        {BlurObjects.map((BlurObject) => (
+          <BlurCard>
+            <TextContainer>
+              <BlurCardPara>{BlurObject.paraObj}</BlurCardPara>
+              <LinkContainer
+                href={BlurObject.href}
+                target={BlurObject.target}
+                rel={BlurObject.rel}
+              >
+                <BlurCardPara>{BlurObject.linkButtonDescript}</BlurCardPara>
+              </LinkContainer>
+            </TextContainer>
+            <LinkContainer
+              href={BlurObject.href}
+              target={BlurObject.target}
+              rel={BlurObject.rel}
+            >
+              <CardImg src={BlurObject.imgUrl} />
+            </LinkContainer>
+          </BlurCard>
         ))}
       </BlurCardsContainer>
-      <BlurCardsContainer>
-        <BlurCardSecond />
-        <BlurCardSecond />
-        <BlurCardSecond />
-      </BlurCardsContainer>
-    </div>
+    </OuterContainer>
   )
 }

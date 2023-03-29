@@ -28,6 +28,7 @@ module.exports = {
     '@typescript-eslint/consistent-type-definitions': 'off',
     // "no-console": "off",
     '@typescript-eslint/no-unused-vars': ['off'],
-    '@typescript-eslint/no-unused-imports': ['off']
+    '@typescript-eslint/no-unused-imports': ['off'],
+    'react/jsx-key': 'off'
   }
 }

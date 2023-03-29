@@ -2,8 +2,8 @@ import { createGlobalStyle } from 'styled-components'
 
 export const GlobalStyle = createGlobalStyle`
     body{
-        background-color: rgba(63, 61, 61, 0.644);
-        background-image: url('https://img.freepik.com/premium-vector/blue-background-with-low-poly-polygon-texture_567470-421.jpg');
+        background-color: #233554;
+        color: white;
     }
     h2{ 
         text-align: center;
