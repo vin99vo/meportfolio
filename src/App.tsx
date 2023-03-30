@@ -1,7 +1,8 @@
 import { type FC } from 'react'
-import { GlobalStyle } from './globalStyles'
+import { GlobalStyle, theme } from './styles'
 import { HeaderRight } from './components/Header/HeaderRight'
 import { Tabs } from './components/Tabs'
+import { ThemeProvider } from 'styled-components'
 
 export const App: FC = () => {
   // const creator = {
@@ -10,10 +11,10 @@ export const App: FC = () => {
   // }
 
   return (
-    <>
+    <ThemeProvider theme={theme}>
       <GlobalStyle />
       <HeaderRight />
       <Tabs />
-    </>
+    </ThemeProvider>
   )
 }

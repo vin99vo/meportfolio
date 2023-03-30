@@ -1,4 +1,4 @@
-import { useRef, useState } from 'react'
+import { useRef, useState, useEffect } from 'react'
 import { AboutMe } from '../body/AboutMe'
 import { Projects } from '../body/Projects'
 import { Home } from '../body/Home'
@@ -16,7 +16,28 @@ import { Contact } from '../body/Contact'
 
 export const Tabs: FC = () => {
   const [toggleTab, setToggleTab] = useState('')
-  const [isMenuOpen, setisMenuOpen] = useState(false)
+  const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [lastScrollY, setLastScrollY] = useState(0)
+
+  const scrollMenu = (): void => {
+    if (typeof window !== 'undefined') {
+      if (window.scrollY > lastScrollY) {
+        setIsMenuOpen(false)
+      }
+
+      setLastScrollY(window.scrollY)
+      console.log(lastScrollY)
+    }
+  }
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      window.addEventListener('scroll', scrollMenu)
+    }
+    return () => {
+      window.removeEventListener('scroll', scrollMenu)
+    }
+  }, [lastScrollY])
 
   const homeRef = useRef<HTMLElement | null>(null)
   const aboutRef = useRef<HTMLElement | null>(null)
@@ -54,10 +75,11 @@ export const Tabs: FC = () => {
   const onTabClickHandler = (section: SectionType): void => {
     section.ref.current?.scrollIntoView({ behavior: 'smooth' })
     setToggleTab(section.title)
+    setIsMenuOpen(false)
   }
 
   const onMenuClickHandler = (): void => {
-    setisMenuOpen(!isMenuOpen)
+    setIsMenuOpen(!isMenuOpen)
   }
 
   return (
@@ -79,11 +101,12 @@ export const Tabs: FC = () => {
             ))}
         </TabRows>
       </DropDownContainer>
-      <ContentInTabs>
-        {sections.map((section) => (
+
+      {sections.map((section) => (
+        <ContentInTabs>
           <Section ref={section.ref}>{section.component}</Section>
-        ))}
-      </ContentInTabs>
+        </ContentInTabs>
+      ))}
     </TabsContainer>
   )
 }

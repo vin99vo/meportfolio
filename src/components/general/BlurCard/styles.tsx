@@ -7,9 +7,9 @@ export const BlurCard = styled.div`
   height: 400px;
   transition: 0.2s ease-in;
   transform: scale(0.97);
-  background-color: #0a192f;
+  background-color: ${(props) => props.theme.secondary};
   font-size: 24px;
-  border-color: rgb(238, 96, 45);
+  border-color: ${(props) => props.theme.callToAction};
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -40,7 +40,7 @@ export const LinkContainer = styled.a`
   display: flex;
   flex-direction: column;
   justify-content: center;
-  color: white;
+  color: ${(props) => props.theme.main};
   opacity: 0.8;
   &:hover {
     opacity: 1;
@@ -49,7 +49,7 @@ export const LinkContainer = styled.a`
 
 export const BlurCardPara = styled.div`
   width: auto;
-  color: white;
+  color: ${(props) => props.theme.main};
   border-style: none;
   font-size: inherit;
   display: block;

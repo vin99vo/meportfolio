@@ -6,7 +6,7 @@ export const LinksButton = styled.a`
   margin: 10px auto 0 auto;
   &:hover img {
     cursor: pointer;
-    box-shadow: 0px 3px 10px rgba(255, 255, 255, 0.4);
+    box-shadow: 0px 5px 10px rgba(238, 96, 45, 0.8);
     color: #fefefe;
   }
 `

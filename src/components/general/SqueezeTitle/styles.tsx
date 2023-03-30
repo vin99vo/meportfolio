@@ -28,13 +28,16 @@ export const Squeeze = keyframes`
     }
 `
 
+export const WordsWrap = styled.div``
+export const LettersWrap = styled.div`
+  display: inline-flex;
+`
 export const SqueezeDiv = styled.div`
   box-sizing: content-box;
-  display: inline;
   &:hover {
-    opacity: 0.8;
+    opacity: 0.9;
     animation: ${Squeeze} 1.5s linear;
-    color: white;
+    color: ${(props) => props.theme.callToAction};
     cursor: context-menu;
   }
 `

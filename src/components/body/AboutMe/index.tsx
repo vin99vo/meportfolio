@@ -20,7 +20,7 @@ import {
   AboutMeContainer,
   CenterSkillIcons
 } from './styles'
-import { SqueezeTitle } from '../../general/SectionTitle'
+import { SqueezeTitle } from '../../general/SqueezeTitle'
 
 export const AboutMe: FC = () => {
   const skills = [

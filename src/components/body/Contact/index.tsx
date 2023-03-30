@@ -9,7 +9,7 @@ import {
   LinkButton
 } from './styles'
 import { BlurCards } from '../../general/BlurCard'
-import { SqueezeTitle } from '../../general/SectionTitle'
+import { SqueezeTitle } from '../../general/SqueezeTitle'
 
 export const Contact: FC = () => {
   return (

@@ -3,18 +3,18 @@ import styled from 'styled-components'
 export const TabButton = styled.a<{
   isActive: boolean
 }>`
-  color: ${(props) => (props.isActive ? 'rgb(238, 96, 45)' : 'white')};
+  color: ${(props) =>
+    props.isActive ? props.theme.callToAction : props.theme.main};
   padding: 20px;
   margin: 20px 0;
   text-align: center;
   width: 100px;
-  background: ${(props) =>
-    props.isActive ? 'rgba(220, 220, 220, 0.916)' : 'rgb(69, 68, 68)'};
+  background: #233554;
   cursor: pointer;
-  border: 1px solid rgba(0, 0, 0, 0.274);
+  border: 2px solid ${(props) => props.theme.main};
   position: relative;
   font-weight: bold;
-  transition: 0.2s all ease-in;
+  transition: all 0.3s ease;
   ${(props) =>
     props.isActive &&
     `&::before {
@@ -30,9 +30,9 @@ export const TabButton = styled.a<{
     border-bottom: transparent;
   }`}
   &:hover {
-    background-color: white;
-    color: rgb(238, 96, 45);
-    box-shadow: -2px 0 rgb(238, 96, 45);
+    background-color: ${(props) => props.theme.main};
+    color: ${(props) => props.theme.callToAction};
+    box-shadow: -2px 0 ${(props) => props.theme.callToAction};
   }
   display: block;
   scroll-behavior: smooth;
@@ -41,12 +41,17 @@ export const TabRows = styled.div`
   position: fixed;
   inset: 50px auto auto 20px;
 `
-export const TabsContainer = styled.div``
+export const TabsContainer = styled.div`
+  background-color: ${(props) => props.theme.secondary};
+`
 export const ContentInTabs = styled.div`
   display: flex;
   flex-direction: column;
   align-items: center;
   margin: auto;
+  width: min(90%, 1600px);
+  /* background-color: ${(props) => props.theme.main}; */
+  border-radius: 100px;
 `
 export const Section = styled.section`
   padding-top: 80px;
