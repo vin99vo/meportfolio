@@ -100,7 +100,7 @@ export const CenterSkillIcons = styled.div`
   justify-content: center;
   width: min(80% 800px);
 `
-export const ProjectCardBack = styled.div<{ isClicked: boolean }>`
+export const ProjectCardBack = styled.div`
   height: 100%;
   width: 100%;
   backface-visibility: hidden;
@@ -108,11 +108,6 @@ export const ProjectCardBack = styled.div<{ isClicked: boolean }>`
   padding: 10px;
   position: absolute;
   transform: rotateY(180deg);
-  ${(props) =>
-    props.isClicked &&
-    `{
-  
-  }`}
 `
 
 export const SourceCodeContainer = styled.a`
@@ -127,7 +122,7 @@ export const SourceCodeContainer = styled.a`
   align-items: center;
   width: min(80%, 220px);
   &:hover {
-    background-color: white;
+    background-color: ${(props) => props.theme.main};
     color: ${(props) => props.theme.callToAction};
     box-shadow: -2px 0 ${(props) => props.theme.callToAction};
   }

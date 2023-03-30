@@ -48,7 +48,7 @@ export const PersonalWebsiteCard: FC = () => {
             ))}
           </ProjectDescript>
         </ProjectCardFront>
-        <ProjectCardBack isClicked={isCardClicked}>
+        <ProjectCardBack>
           <ProjectTitle>Personal Website</ProjectTitle>
           <ProjectPara>This very site!</ProjectPara>
           <ProjectPara>
