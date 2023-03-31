@@ -1,8 +1,5 @@
 import styled, { keyframes } from 'styled-components'
-export const ProjectCard = styled.div`
-  transition: 0.3s all ease-in;
-  transform-style: preserve-3d;
-`
+
 export const ProjectPara = styled.div`
   font-size: 16px;
   padding: 6px 4px;
@@ -12,8 +9,12 @@ export const ProjectPara = styled.div`
 `
 
 export const ProjectCardContainer = styled.div<{ isClicked: boolean }>`
-  height: 400px;
-  width: 350px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 300px;
+  height: 350px;
   border-color: ${(props) => props.theme.callToAction};
   border-style: solid;
   border-width: 2px;
@@ -34,31 +35,23 @@ export const ProjectCardContainer = styled.div<{ isClicked: boolean }>`
   ${(props) =>
     props.isClicked &&
     `{
-    height: 450px;
-    width: 800px;
-    transform: translateY(0%) translateX(20%);
-    box-shadow: 0 0 14px 6px rgb(238, 96, 45);
-  
-    &:hover > ${ProjectCard} {
-      transform: rotateY(180deg) translate(-20px, 0);
-    }
-    ${ProjectPara} {
-      font-size: 18pxpx;
-      padding: 14px 10px;
-    }
-    > ${ProjectCard}{
-        transform: rotateY(180deg) translate(-20px, 0);
-    }
-    
-  }`}
+    width: min(90%, 800px);
+    height: auto;
+    box-shadow: 0 0 14px 6px rgb(238, 96, 45);   
+  }
+ }`}
 `
 
-export const ProjectCardFront = styled.div`
-  height: 100%;
-  width: 100%;
+export const ProjectCardFront = styled.div<{ isClicked: boolean }>`
   backface-visibility: hidden;
   border-radius: 50px;
   position: absolute;
+  transition: 0.3s all ease-in;
+  ${(props) =>
+    props.isClicked &&
+    `{
+    transform: rotateY(180deg);
+  }`}
 `
 export const ProjectTitle = styled.div`
   font-size: 24px;
@@ -69,6 +62,11 @@ export const ProjectTitle = styled.div`
 
 export const ProjectDescript = styled.div`
   padding: 10px;
+`
+export const SkillsDivFlex = styled.div`
+  display: flex;
+  justify-content: space-between;
+  color: ${(props) => props.theme.callToAction};
 `
 
 export const PanMovie = keyframes`
@@ -113,6 +111,7 @@ export const ProjectImg = styled.div<{ img: string }>`
 export const PortfolioSkills = styled.div`
   font-size: 14px;
   padding: 5px 5px;
+  backface-visibility: hidden;
 `
 export const Levitate = keyframes`
  0%{
@@ -130,28 +129,45 @@ export const SkillIconsContainer = styled.section`
   vertical-align: middle;
   gap: 10px;
   justify-content: space-around;
-  width: min(80%, 800px);
+  width: min(80%, 400px);
   animation: ${Levitate} infinite 2s linear;
 `
 export const CenterSkillIcons = styled.div`
   margin-top: 20px;
   display: flex;
   justify-content: center;
-  width: min(80% 800px);
+  width: min(80%, 800px);
+  opacity: 0;
+  transition: 0.3s all ease-in;
 `
-export const ProjectCardBack = styled.div`
-  /* height: 100%;
-  width: 100%; */
-  backface-visibility: hidden;
-  border-radius: 50px;
-  padding: 10px;
-  position: absolute;
-  transform: rotateY(180deg);
+export const ProjectCardBack = styled.div<{ isClicked: boolean }>`
   display: flex;
   flex-direction: column;
+  align-items: center;
+  width: min(90%, 600px);
+  padding: 10px;
+  transform: rotateY(180deg);
+  backface-visibility: hidden;
+  transition: 0.3s all ease-in;
+  ${(props) =>
+    props.isClicked &&
+    `{
+    transform: rotateY(0deg);
+  }
+  > ${ProjectPara}{
+    font-size: 22px;
+  }
+  > ${CenterSkillIcons}{
+    opacity: 1;
+  }
+  > ${ProjectTitle}{
+    font-size 32px;
+    text-decoration: underline;
+  }
+  `}
 `
 
-export const SourceCodeContainer = styled.a`
+export const SourceCodeButton = styled.a`
   border: 2px ${(props) => props.theme.callToAction} solid;
   background-color: ${(props) => props.theme.secondary};
   color: ${(props) => props.theme.main};

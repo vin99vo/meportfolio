@@ -6,16 +6,16 @@ import PortfolioImg from '../../../../thumbnails/icons/portfolioImg.jpg'
 import { Icon } from '../../../general/Icon'
 import {
   ProjectCardContainer,
-  ProjectCard,
   ProjectCardFront,
   ProjectTitle,
   ProjectPara,
   ProjectCardBack,
   ProjectDescript,
+  SkillsDivFlex,
   PortfolioSkills,
   SkillIconsContainer,
   CenterSkillIcons,
-  SourceCodeContainer,
+  SourceCodeButton,
   ImgContainer,
   ProjectImg
 } from './styles'
@@ -37,65 +37,59 @@ export const PersonalWebsiteCard: FC = () => {
       onClick={cardClickedHandler}
       isClicked={isCardClicked}
     >
-      <ProjectCard>
-        <ProjectCardFront>
-          <ProjectTitle>Personal Website</ProjectTitle>
-          <ProjectDescript>
-            <ProjectPara>
-              A simple website to showcase a little of what I can do.
-            </ProjectPara>
+      <ProjectCardFront isClicked={isCardClicked}>
+        <ProjectTitle>Personal Website</ProjectTitle>
+        <ProjectDescript>
+          <ProjectPara>
+            A simple website to showcase a little of what I can do.
+          </ProjectPara>
+          <SkillsDivFlex>
+            {skills.map((skill) => (
+              <PortfolioSkills>&#8594; {skill.alt}</PortfolioSkills>
+            ))}
+          </SkillsDivFlex>
+        </ProjectDescript>
+        <ImgContainer>
+          {' '}
+          <ProjectImg img={PortfolioImg} />
+        </ImgContainer>
+      </ProjectCardFront>
+
+      <ProjectCardBack isClicked={isCardClicked}>
+        <ProjectTitle>Personal Website</ProjectTitle>
+        <ProjectPara>This very site!</ProjectPara>
+        <ProjectPara>
+          My first portfolio website built after learning React.
+        </ProjectPara>
+        <ProjectPara>
+          Hosted on GitHub Pages and checked with TypeScript, ESLint, Prettier,
+          and utilizing Styled Components.
+        </ProjectPara>
+        <ProjectPara>This website was built with</ProjectPara>
+        <CenterSkillIcons>
+          <SkillIconsContainer>
             {skills.map((skill) => (
               <div>
-                <PortfolioSkills>&#8594; {skill.alt}</PortfolioSkills>
+                <Icon
+                  isSmall={true}
+                  imgUrl={skill.imgUrl}
+                  alt={skill.alt}
+                  key={skill.alt}
+                />
+                <PortfolioSkills>{skill.alt}</PortfolioSkills>
               </div>
             ))}
-          </ProjectDescript>
-          <ImgContainer>
-            {' '}
-            <ProjectImg img={PortfolioImg} />
-          </ImgContainer>
-        </ProjectCardFront>
-        <ProjectCardBack>
-          <ProjectTitle>Personal Website</ProjectTitle>
-          <ProjectPara>This very site!</ProjectPara>
-          <ProjectPara>
-            My first portfolio website built after learning React.
-          </ProjectPara>
-          {isCardClicked && (
-            <ProjectPara>
-              Hosted on GitHub Pages and checked with TypeScript, ESLint,
-              Prettier, and utilizing Styled Components.
-            </ProjectPara>
-          )}
-          <ProjectPara>
-            This website was built with
-            <CenterSkillIcons>
-              <SkillIconsContainer>
-                {skills.map((skill) => (
-                  <div>
-                    <Icon
-                      isSmall={true}
-                      imgUrl={skill.imgUrl}
-                      alt={skill.alt}
-                      key={skill.alt}
-                    />
-                    <PortfolioSkills>{skill.alt}</PortfolioSkills>
-                  </div>
-                ))}
-              </SkillIconsContainer>
-            </CenterSkillIcons>
-          </ProjectPara>
-          {isCardClicked && (
-            <SourceCodeContainer
-              href="https://github.com/vin99vo/meportfolio"
-              target="_blank"
-              rel="noreferrer"
-            >
-              View Source
-            </SourceCodeContainer>
-          )}
-        </ProjectCardBack>
-      </ProjectCard>
+          </SkillIconsContainer>
+        </CenterSkillIcons>
+
+        <SourceCodeButton
+          href="https://github.com/vin99vo/meportfolio"
+          target="_blank"
+          rel="noreferrer"
+        >
+          View Source
+        </SourceCodeButton>
+      </ProjectCardBack>
     </ProjectCardContainer>
   )
 }
