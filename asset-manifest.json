@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/meportfolio/static/css/main.e6c13ad2.css",
+    "main.js": "/meportfolio/static/js/main.f86248ba.js",
+    "static/media/ReduxLogo.png": "/meportfolio/static/media/ReduxLogo.1b4bb5fceb01b19da59d.png",
+    "static/media/GitHubLogo.png": "/meportfolio/static/media/GitHubLogo.4bb497e598c121a691f7.png",
+    "static/media/portfolioImg.jpg": "/meportfolio/static/media/portfolioImg.4be78dc4ba2b844e2c20.jpg",
+    "static/media/CSS3Logo.png": "/meportfolio/static/media/CSS3Logo.4e67641bb68b658d9b2b.png",
+    "static/media/TypeScriptLogo.png": "/meportfolio/static/media/TypeScriptLogo.52ea0bc40ba11d507e7d.png",
+    "static/media/javaLogo.png": "/meportfolio/static/media/javaLogo.ddf8676bd569fe01ab44.png",
+    "static/media/HTML5Logo.png": "/meportfolio/static/media/HTML5Logo.eebc3fbfbde4b2abd9db.png",
+    "static/media/ReactJSLogo.png": "/meportfolio/static/media/ReactJSLogo.ef20e673b9282f8f30fd.png",
+    "static/media/JavaScriptLogo.png": "/meportfolio/static/media/JavaScriptLogo.266bd9fb2663dcc057b4.png",
+    "index.html": "/meportfolio/index.html",
+    "main.e6c13ad2.css.map": "/meportfolio/static/css/main.e6c13ad2.css.map",
+    "main.f86248ba.js.map": "/meportfolio/static/js/main.f86248ba.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e6c13ad2.css",
+    "static/js/main.f86248ba.js"
+  ]
+}
