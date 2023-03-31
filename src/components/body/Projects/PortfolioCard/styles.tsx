@@ -1,7 +1,7 @@
 import styled, { keyframes } from 'styled-components'
 
 export const ProjectPara = styled.div`
-  font-size: 16px;
+  font-size: 20px;
   padding: 6px 4px;
   width: 90%;
   line-height: normal;
@@ -20,6 +20,7 @@ export const ProjectCardContainer = styled.div<{ isClicked: boolean }>`
   border-width: 2px;
   position: relative;
   transform: scale(0.9);
+  opacity: 0.85;
   transition: 0.3s all ease-in;
   &:hover {
     cursor: pointer;
@@ -54,7 +55,7 @@ export const ProjectCardFront = styled.div<{ isClicked: boolean }>`
   }`}
 `
 export const ProjectTitle = styled.div`
-  font-size: 24px;
+  font-size: 28px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: bold;
   padding: 10px;
@@ -155,13 +156,13 @@ export const ProjectCardBack = styled.div<{ isClicked: boolean }>`
     transform: rotateY(0deg);
   }
   > ${ProjectPara}{
-    font-size: 22px;
+    font-size: 28px;
   }
   > ${CenterSkillIcons}{
     opacity: 1;
   }
   > ${ProjectTitle}{
-    font-size 32px;
+    font-size: 40px;
     text-decoration: underline;
   }
   `}

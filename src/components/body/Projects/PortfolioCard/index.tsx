@@ -56,7 +56,7 @@ export const PersonalWebsiteCard: FC = () => {
       </ProjectCardFront>
 
       <ProjectCardBack isClicked={isCardClicked}>
-        <ProjectTitle>Personal Website</ProjectTitle>
+        <ProjectTitle>My Portfolio Website</ProjectTitle>
         <ProjectPara>This very site!</ProjectPara>
         <ProjectPara>
           My first portfolio website built after learning React.
