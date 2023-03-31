@@ -20,7 +20,6 @@ export const ProjectCardContainer = styled.div<{ isClicked: boolean }>`
   position: relative;
   transform: scale(0.9);
   transition: 0.3s all ease-in;
-
   &:hover {
     cursor: pointer;
   }
@@ -71,6 +70,46 @@ export const ProjectTitle = styled.div`
 export const ProjectDescript = styled.div`
   padding: 10px;
 `
+
+export const PanMovie = keyframes`
+  0%{
+    background-position: 0% 0%;
+    background-size: 250%;
+  }
+  33% {
+    background-position: 60% 20%;
+    background-size: 250%;
+  }
+  33.001%{
+    background-position: 100% 20%;
+    background-size: 300%;
+  }
+  66% {
+    background-position: 20% 75%;
+    background-size: 300%;
+  }
+  66.001%{
+    background-position: 100% 20%;
+    background-size: 150%;
+  }
+  100% {
+    background-position: 55% 0%;
+    background-size: 150%;
+  }
+`
+export const ImgContainer = styled.div`
+  display: flex;
+  justify-content: center;
+`
+export const ProjectImg = styled.div<{ img: string }>`
+  height: 150px;
+  width: 250px;
+  background-image: url(${(props) => props.img});
+  background-size: 300%;
+  opacity: 0.7;
+  animation: ${PanMovie} 15s infinite linear;
+`
+
 export const PortfolioSkills = styled.div`
   font-size: 14px;
   padding: 5px 5px;
@@ -79,7 +118,7 @@ export const Levitate = keyframes`
  0%{
     transform: translateY(0);
   }50% {
-    transform: translateY(5px);
+    transform: translateY(10px);
   } 100% {
     transform: translateY(0);
   }
@@ -101,13 +140,15 @@ export const CenterSkillIcons = styled.div`
   width: min(80% 800px);
 `
 export const ProjectCardBack = styled.div`
-  height: 100%;
-  width: 100%;
+  /* height: 100%;
+  width: 100%; */
   backface-visibility: hidden;
   border-radius: 50px;
   padding: 10px;
   position: absolute;
   transform: rotateY(180deg);
+  display: flex;
+  flex-direction: column;
 `
 
 export const SourceCodeContainer = styled.a`

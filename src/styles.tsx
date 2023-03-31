@@ -2,7 +2,7 @@ import { createGlobalStyle } from 'styled-components'
 
 export const theme = {
   main: 'rgb(255, 231, 204)',
-  secondary: 'rgb(35, 53, 84)',
+  secondary: 'rgb(42, 68, 112)',
   callToAction: 'rgb(238, 96, 45)'
 }
 

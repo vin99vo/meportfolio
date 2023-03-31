@@ -27,7 +27,6 @@ export const Home: FC = () => {
           <MyName>
             <HackerName text={name} />
           </MyName>
-
           <HomeSubtitle>
             <SqueezeTitle title="Front-End Software Developer." />
           </HomeSubtitle>

@@ -6,17 +6,20 @@ type SqueezeTitleType = {
 }
 
 export const SqueezeTitle: FC<SqueezeTitleType> = ({ title }) => {
-  const start = title.split(/(\s+)/)
+  const start = title.split(' ')
+  const phraseLength = start.length
 
   return (
     <FullContainer>
       <WordsWrap>
-        {start.map((word) => (
+        {start.map((word, wordIndex) => (
           <LettersWrap>
-            {word.split('').map((letter) => (
+            {word.split(/(\s+)/).map((letter) => (
               <SqueezeDiv>{letter} </SqueezeDiv>
             ))}
-            &nbsp;
+            {/* {phraseLength !== wordIndex ? '&nbsp;' : ''} */}
+            {/* &nbsp; */}
+            {phraseLength !== wordIndex + 1 && <span>&nbsp;</span>}
           </LettersWrap>
         ))}
       </WordsWrap>

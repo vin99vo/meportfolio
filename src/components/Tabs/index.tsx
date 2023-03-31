@@ -101,7 +101,6 @@ export const Tabs: FC = () => {
             ))}
         </TabRows>
       </DropDownContainer>
-
       {sections.map((section) => (
         <ContentInTabs>
           <Section ref={section.ref}>{section.component}</Section>

@@ -5,8 +5,8 @@ export const TabButton = styled.a<{
 }>`
   color: ${(props) =>
     props.isActive ? props.theme.callToAction : props.theme.main};
-  padding: 20px;
-  margin: 20px 0;
+  padding: 12px;
+  margin: 10px 0;
   text-align: center;
   width: 100px;
   background: #233554;
@@ -40,6 +40,7 @@ export const TabButton = styled.a<{
 export const TabRows = styled.div`
   position: fixed;
   inset: 50px auto auto 20px;
+  z-index: 100;
 `
 export const TabsContainer = styled.div`
   background-color: ${(props) => props.theme.secondary};
@@ -50,7 +51,6 @@ export const ContentInTabs = styled.div`
   align-items: center;
   margin: auto;
   width: min(90%, 1600px);
-  /* background-color: ${(props) => props.theme.main}; */
   border-radius: 100px;
 `
 export const Section = styled.section`

@@ -2,6 +2,8 @@ import { useState, type FC } from 'react'
 import ReactJSLogo from '../../../../thumbnails/icons/ReactJSLogo.png'
 import CSS3Logo from '../../../../thumbnails/icons/CSS3Logo.png'
 import HTML5Logo from '../../../../thumbnails/icons/HTML5Logo.png'
+import PortfolioImg from '../../../../thumbnails/icons/portfolioImg.jpg'
+import PortfolioImgSecond from '../../../../thumbnails/icons/portfolioImgSecond.jpg'
 import { Icon } from '../../../general/Icon'
 import {
   ProjectCardContainer,
@@ -14,7 +16,9 @@ import {
   PortfolioSkills,
   SkillIconsContainer,
   CenterSkillIcons,
-  SourceCodeContainer
+  SourceCodeContainer,
+  ImgContainer,
+  ProjectImg
 } from './styles'
 
 export const PersonalWebsiteCard: FC = () => {
@@ -47,6 +51,10 @@ export const PersonalWebsiteCard: FC = () => {
               </div>
             ))}
           </ProjectDescript>
+          <ImgContainer>
+            {' '}
+            <ProjectImg img={PortfolioImg} />
+          </ImgContainer>
         </ProjectCardFront>
         <ProjectCardBack>
           <ProjectTitle>Personal Website</ProjectTitle>
