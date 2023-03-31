@@ -2,7 +2,9 @@ import styled from 'styled-components'
 
 export const ProjectsSection = styled.section`
   display: flex;
-  justify-content: center;
+  flex-direction: column;
+  /* justify-content: center; */
+  align-items: center;
   margin-bottom: 80px;
   background-color: inherit;
 `
@@ -14,11 +16,4 @@ export const SectionTitle = styled.div`
   text-align: center;
   display: flex;
   justify-content: center;
-`
-export const ProjectsContainer = styled.div`
-  width: min(80%, 800px);
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin: 0;
 `

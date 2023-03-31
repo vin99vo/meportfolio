@@ -13,7 +13,7 @@ export const InvertColourButton = styled.button`
   height: 40px;
   width: 40px;
   font-size: 16px;
-  border-radius: 6px;
+  border-radius: 2px;
   border: 2px solid;
   background-color: ${(props) => props.theme.callToAction};
   color: ${(props) => props.theme.main};
