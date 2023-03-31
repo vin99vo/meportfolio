@@ -1,9 +1,17 @@
 import { createGlobalStyle } from 'styled-components'
 
+export const theme = {
+  main: 'rgb(255, 231, 204)',
+  secondary: 'rgb(42, 68, 112)',
+  callToAction: 'rgb(238, 96, 45)'
+}
+
 export const GlobalStyle = createGlobalStyle`
     body{
-        background-color: #233554;
-        color: white;
+        /* background-color: white; */
+        color: rgb(255, 231, 204);
+        font-family: sans-serif;
+        scroll-behavior: smooth;
     }
     h2{ 
         text-align: center;

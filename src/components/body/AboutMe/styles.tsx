@@ -3,10 +3,9 @@ import styled from 'styled-components'
 export const AboutMeContainer = styled.div`
   display: flex;
   justify-content: center;
-  background-color: #0c4e8784;
 `
 export const AboutMeTitle = styled.div`
-  color: rgb(238, 96, 45);
+  color: ${(props) => props.theme.main};
   font-size: 52px;
   font-weight: 900;
   padding: 10px auto;
@@ -19,6 +18,7 @@ export const AboutMePara = styled.p`
   line-height: normal;
   margin-bottom: 10px;
   text-align: center;
+  opacity: 0.8;
 `
 export const SkillsTitle = styled.p`
   font-size: 44px;

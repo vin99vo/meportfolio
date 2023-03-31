@@ -5,10 +5,9 @@ export const ContactWrapper = styled.section`
   flex-direction: column;
   justify-content: center;
   text-align: center;
-  background-color: #285704;
 `
 export const GetInTouch = styled.div`
-  color: rgb(238, 96, 45);
+  color: ${(props) => props.theme.main};
   font-size: 60px;
   font-weight: 900;
   padding: 0 auto;
@@ -25,6 +24,7 @@ export const ContactDescript = styled.div`
   font-size: 36px;
   width: min(80%, 600px);
   margin: 5px auto;
+  opacity: 0.8;
 `
 
 export const LinkButton = styled.button`
@@ -33,12 +33,12 @@ export const LinkButton = styled.button`
   font-size: 20px;
   border-radius: 6px;
   border: 2px solid;
-  background-color: #0a192f;
-  color: white;
+  background-color: ${(props) => props.theme.secondary};
+  color: ${(props) => props.theme.main};
   transition: 0.2s ease-in;
   &:hover {
-    background-color: white;
-    color: rgb(238, 96, 45);
+    background-color: ${(props) => props.theme.main};
+    color: ${(props) => props.theme.callToAction};
   }
   display: block;
   margin: 50px auto 0;
