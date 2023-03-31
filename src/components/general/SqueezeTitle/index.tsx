@@ -17,8 +17,6 @@ export const SqueezeTitle: FC<SqueezeTitleType> = ({ title }) => {
             {word.split(/(\s+)/).map((letter) => (
               <SqueezeDiv>{letter} </SqueezeDiv>
             ))}
-            {/* {phraseLength !== wordIndex ? '&nbsp;' : ''} */}
-            {/* &nbsp; */}
             {phraseLength !== wordIndex + 1 && <span>&nbsp;</span>}
           </LettersWrap>
         ))}
