@@ -17,6 +17,7 @@ export const Home: FC = () => {
   const about = []
 
   const name = 'Vincent Vo.'
+  const isSection = false
 
   return (
     <HomeWrapper>
@@ -28,7 +29,10 @@ export const Home: FC = () => {
             <HackerName text={name} />
           </MyName>
           <HomeSubtitle>
-            <SqueezeTitle title="Front-End Software Developer." />
+            <SqueezeTitle
+              title="Front-End Software Developer."
+              isSection={isSection}
+            />
           </HomeSubtitle>
           <HomePara>
             I focus on delivering seamless digital experiences and responsive

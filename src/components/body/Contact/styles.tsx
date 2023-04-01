@@ -8,9 +8,11 @@ export const ContactWrapper = styled.section`
 `
 export const GetInTouch = styled.div`
   color: ${(props) => props.theme.main};
-  font-size: 60px;
+  font-size: 52px;
   font-weight: 900;
   padding: 0 auto;
+  display: flex;
+  justify-content: center;
 `
 export const ContactDescriptContainer = styled.div`
   margin: 40px auto;
@@ -21,7 +23,7 @@ export const ContactDescriptContainer = styled.div`
 export const ContactDescript = styled.div`
   display: flex;
   justify-content: center;
-  font-size: 36px;
+  font-size: 24px;
   width: min(80%, 600px);
   margin: 5px auto;
   opacity: 0.8;

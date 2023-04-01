@@ -31,4 +31,5 @@ export const InvertColourButton = styled.button`
   cursor: pointer;
   position: fixed;
   inset: 20px auto auto 20px;
+  z-index: 100;
 `

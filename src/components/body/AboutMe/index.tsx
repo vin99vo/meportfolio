@@ -35,11 +35,12 @@ export const AboutMe: FC = () => {
     { imgUrl: JavaLogo, alt: 'Java', logo: 'Java' }
   ]
 
+  const isSection = true
   return (
     <AboutMeContainer>
       <Card>
         <AboutMeTitle>
-          <SqueezeTitle title="About Me" />
+          <SqueezeTitle title="01. About Me" isSection />
         </AboutMeTitle>
         <AboutMePara>
           Interested in all aspects of the front-end spectrum to optimize the

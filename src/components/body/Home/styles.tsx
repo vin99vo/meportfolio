@@ -1,4 +1,4 @@
-import styled from 'styled-components'
+import styled, { keyframes } from 'styled-components'
 
 export const HomeWrapper = styled.section`
   height: 100vh;
@@ -47,10 +47,19 @@ export const HomePara = styled.p`
   display: inline-flex;
   color: ${(props) => props.theme.secondary};
 `
-
+export const Levitate = keyframes`
+ 0%{
+    transform: translateY(-5px);
+  }50% {
+    transform: translateY(5px);
+  } 100% {
+    transform: translateY(-5px);
+  }
+`
 export const HomeImg = styled.img`
   object-fit: contain;
   max-height: 350px;
   max-width: 350px;
   border-radius: 40px;
+  animation: ${Levitate} infinite 3s linear;
 `

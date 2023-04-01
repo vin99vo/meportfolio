@@ -6,10 +6,11 @@ import { SqueezeTitle } from '../../general/SqueezeTitle'
 import { PersonalWebsiteCard } from './PortfolioCard'
 
 export const Projects: FC = () => {
+  const isSection = true
   return (
     <ProjectsSection>
       <SectionTitle>
-        <SqueezeTitle title="Projects" />
+        <SqueezeTitle title="02. Projects" isSection />
       </SectionTitle>
       <PersonalWebsiteCard />
     </ProjectsSection>

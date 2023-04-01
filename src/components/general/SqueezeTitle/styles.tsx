@@ -32,8 +32,10 @@ export const WordsWrap = styled.div``
 export const LettersWrap = styled.div`
   display: inline-flex;
 `
-export const SqueezeDiv = styled.div`
+export const SqueezeDiv = styled.div<{ color: string }>`
   box-sizing: content-box;
+  color: ${(props) =>
+    props.color === 'orange' ? props.theme.callToAction : 'inherit'};
   &:hover {
     opacity: 0.9;
     animation: ${Squeeze} 1.5s linear;

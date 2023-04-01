@@ -3,6 +3,7 @@ import ReactJSLogo from '../../../../thumbnails/icons/ReactJSLogo.png'
 import CSS3Logo from '../../../../thumbnails/icons/CSS3Logo.png'
 import HTML5Logo from '../../../../thumbnails/icons/HTML5Logo.png'
 import PortfolioImg from '../../../../thumbnails/icons/portfolioImg.jpg'
+import GitHubLogo from '../../../../thumbnails/icons/GitHubLogo.png'
 import { Icon } from '../../../general/Icon'
 import {
   ProjectCardContainer,
@@ -17,7 +18,10 @@ import {
   CenterSkillIcons,
   SourceCodeButton,
   ImgContainer,
-  ProjectImg
+  ProjectImg,
+  SeeMoreButton,
+  HighlightText,
+  GitHubIcon
 } from './styles'
 
 export const PersonalWebsiteCard: FC = () => {
@@ -45,7 +49,7 @@ export const PersonalWebsiteCard: FC = () => {
           </ProjectPara>
           <SkillsDivFlex>
             {skills.map((skill) => (
-              <PortfolioSkills>&#8594; {skill.alt}</PortfolioSkills>
+              <PortfolioSkills> &gt; {skill.alt}</PortfolioSkills>
             ))}
           </SkillsDivFlex>
         </ProjectDescript>
@@ -53,19 +57,22 @@ export const PersonalWebsiteCard: FC = () => {
           {' '}
           <ProjectImg img={PortfolioImg} />
         </ImgContainer>
+        <SeeMoreButton> &lt; &lt; See More &gt; &gt; </SeeMoreButton>
       </ProjectCardFront>
 
       <ProjectCardBack isClicked={isCardClicked}>
         <ProjectTitle>My Portfolio Website</ProjectTitle>
         <ProjectPara>This very site!</ProjectPara>
         <ProjectPara>
-          My first portfolio website built after learning React.
+          My first portfolio website built after learning{' '}
+          <HighlightText>React.</HighlightText>
         </ProjectPara>
         <ProjectPara>
-          Hosted on GitHub Pages and checked with TypeScript, ESLint, Prettier,
-          and utilizing Styled Components.
+          Hosted on <HighlightText>GitHub Pages</HighlightText> and checked with{' '}
+          <HighlightText>TypeScript, ESLint, Prettier,</HighlightText>
+          and utilizing <HighlightText>Styled Components.</HighlightText>
         </ProjectPara>
-        <ProjectPara>This website was built with</ProjectPara>
+        <ProjectPara>This website was created with</ProjectPara>
         <CenterSkillIcons>
           <SkillIconsContainer>
             {skills.map((skill) => (
@@ -88,6 +95,7 @@ export const PersonalWebsiteCard: FC = () => {
           rel="noreferrer"
         >
           View Source
+          <GitHubIcon src={GitHubLogo} />
         </SourceCodeButton>
       </ProjectCardBack>
     </ProjectCardContainer>

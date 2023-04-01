@@ -48,27 +48,32 @@ export const Tabs: FC = () => {
     ref: RefObject<HTMLElement>
     component: ReactNode
     title: string
+    prefix: string
   }
   const sections: SectionType[] = [
     {
       ref: homeRef,
       component: <Home />,
-      title: 'Home'
+      title: 'Home',
+      prefix: '00.'
     },
     {
       ref: aboutRef,
       component: <AboutMe />,
-      title: 'AboutMe'
+      title: 'About Me',
+      prefix: '01.'
     },
     {
       ref: projectsRef,
       component: <Projects />,
-      title: 'Projects'
+      title: 'Projects',
+      prefix: '02.'
     },
     {
       ref: contactRef,
       component: <Contact />,
-      title: 'Contact'
+      title: 'Contact',
+      prefix: '03.'
     }
   ]
 
@@ -96,7 +101,7 @@ export const Tabs: FC = () => {
                   onTabClickHandler(section)
                 }}
               >
-                {section.title}
+                {section.prefix} {section.title}
               </TabButton>
             ))}
         </TabRows>

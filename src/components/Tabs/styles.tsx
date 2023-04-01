@@ -7,8 +7,9 @@ export const TabButton = styled.a<{
     props.isActive ? props.theme.callToAction : props.theme.main};
   padding: 12px;
   margin: 10px 0;
-  text-align: center;
-  width: 100px;
+  text-align: left;
+  box-sizing: border-box;
+  width: 140px;
   background: #233554;
   cursor: pointer;
   border: 2px solid ${(props) => props.theme.main};
@@ -39,7 +40,7 @@ export const TabButton = styled.a<{
 `
 export const TabRows = styled.div`
   position: fixed;
-  inset: 50px auto auto 20px;
+  inset: 60px auto auto 20px;
   z-index: 100;
 `
 export const TabsContainer = styled.div`

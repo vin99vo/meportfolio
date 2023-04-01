@@ -14,7 +14,7 @@ export const ProjectCardContainer = styled.div<{ isClicked: boolean }>`
   align-items: center;
   text-align: center;
   width: 300px;
-  height: 350px;
+  height: 400px;
   border-color: ${(props) => props.theme.callToAction};
   border-style: solid;
   border-width: 2px;
@@ -55,7 +55,7 @@ export const ProjectCardFront = styled.div<{ isClicked: boolean }>`
   }`}
 `
 export const ProjectTitle = styled.div`
-  font-size: 28px;
+  font-size: 32px;
   font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
   font-weight: bold;
   padding: 10px;
@@ -99,6 +99,7 @@ export const PanMovie = keyframes`
 export const ImgContainer = styled.div`
   display: flex;
   justify-content: center;
+  padding: 5px;
 `
 export const ProjectImg = styled.div<{ img: string }>`
   height: 150px;
@@ -110,7 +111,7 @@ export const ProjectImg = styled.div<{ img: string }>`
 `
 
 export const PortfolioSkills = styled.div`
-  font-size: 14px;
+  font-size: 18px;
   padding: 5px 5px;
   backface-visibility: hidden;
 `
@@ -140,6 +141,20 @@ export const CenterSkillIcons = styled.div`
   width: min(80%, 800px);
   opacity: 0;
   transition: 0.3s all ease-in;
+`
+export const SeeMoreButton = styled.div`
+  display: flex;
+  justify-content: center;
+  font-size: 20px;
+  color: ${(props) => props.theme.callToAction};
+  text-shadow: 0 0 10px ${(props) => props.theme.callToAction};
+  padding-top: 6px;
+`
+export const HighlightText = styled.span`
+  font-size: 28px;
+  color: white;
+  opacity: 1;
+  text-shadow: 0 0 6px white;
 `
 export const ProjectCardBack = styled.div<{ isClicked: boolean }>`
   display: flex;
@@ -178,10 +193,17 @@ export const SourceCodeButton = styled.a`
   text-decoration: none;
   display: flex;
   align-items: center;
+  justify-content: center;
   width: min(80%, 220px);
+  gap: 10px;
   &:hover {
     background-color: ${(props) => props.theme.main};
     color: ${(props) => props.theme.callToAction};
     box-shadow: -2px 0 ${(props) => props.theme.callToAction};
   }
+`
+export const GitHubIcon = styled.img`
+  height: 20px;
+  width: 20px;
+  border-radius: 50px;
 `

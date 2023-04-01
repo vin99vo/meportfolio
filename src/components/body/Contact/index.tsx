@@ -12,11 +12,12 @@ import { BlurCards } from '../../general/BlurCard'
 import { SqueezeTitle } from '../../general/SqueezeTitle'
 
 export const Contact: FC = () => {
+  const isSection = true
   return (
     <ContactWrapper>
       <ContactDescriptContainer>
         <GetInTouch>
-          <SqueezeTitle title="Get In Touch" />
+          <SqueezeTitle title="03. Get In Touch" isSection />
         </GetInTouch>
         <ContactDescript>
           Want to get in touch? I&#39;d love to hear from you. Here&#39;s how

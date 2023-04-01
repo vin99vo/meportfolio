@@ -3,9 +3,10 @@ import { SqueezeDiv, FullContainer, LettersWrap, WordsWrap } from './styles'
 
 type SqueezeTitleType = {
   title: string
+  isSection: boolean
 }
 
-export const SqueezeTitle: FC<SqueezeTitleType> = ({ title }) => {
+export const SqueezeTitle: FC<SqueezeTitleType> = ({ title, isSection }) => {
   const start = title.split(' ')
   const phraseLength = start.length
 
@@ -15,7 +16,11 @@ export const SqueezeTitle: FC<SqueezeTitleType> = ({ title }) => {
         {start.map((word, wordIndex) => (
           <LettersWrap>
             {word.split('').map((letter) => (
-              <SqueezeDiv>{letter} </SqueezeDiv>
+              <SqueezeDiv
+                color={wordIndex === 0 ? (isSection ? 'orange' : '') : ''}
+              >
+                {letter}{' '}
+              </SqueezeDiv>
             ))}
             {phraseLength !== wordIndex + 1 && <span>&nbsp;</span>}
           </LettersWrap>
